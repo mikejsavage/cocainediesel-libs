@@ -7,7 +7,7 @@ set FLAGS=%FLAGS% -DSDL_SHARED=OFF
 set FLAGS=%FLAGS% -DFORCE_STATIC_VCRT=ON
 set FLAGS=%FLAGS% -DRENDER_D3D=OFF 
 
-robocopy SDL2-2.0.9 sdlbuild /E
+robocopy SDL2-2.0.9 sdlbuild /E /NFL /NDL /NJH /NJS /NP
 mkdir sdlbuild\build
 cd sdlbuild\build
 

@@ -9,7 +9,7 @@ set FLAGS=%FLAGS% -DCURL_STATIC_CRT=ON
 set FLAGS=%FLAGS% -DHTTP_ONLY=ON
 set FLAGS=%FLAGS% -DCURL_ZLIB=OFF
 
-robocopy curl-7.62.0 curlbuild /E
+robocopy curl-7.62.0 curlbuild /E /NFL /NDL /NJH /NJS /NP
 cd curlbuild
 
 cmake -G "Visual Studio 14 2015 Win64" %FLAGS% .
