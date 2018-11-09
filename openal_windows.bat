@@ -4,6 +4,7 @@ mkdir build\openal\windows-debug
 mkdir build\openal\windows-release
 
 set FLAGS=%FLAGS% -DLIBTYPE=STATIC
+REM FLAGS=%FLAGS% -DFORCE_STATIC_VCRT=ON
 set FLAGS=%FLAGS% -DALSOFT_UTILS=OFF
 set FLAGS=%FLAGS% -DALSOFT_EXAMPLES=OFF
 set FLAGS=%FLAGS% -DALSOFT_TESTS=OFF
