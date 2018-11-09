@@ -24,6 +24,5 @@ cp openalbuild\Debug\common.lib build\openal\windows-debug\common.lib
 cp openalbuild\Debug\common.pdb build\openal\windows-debug\common.pdb
 
 cp openalbuild\Release\OpenAL32.lib build\openal\windows-release\openal.lib
-cp openalbuild\Release\common.lib build\openal\windows-release\openal.lib
 
 rmdir /S /Q openalbuild
