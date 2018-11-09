@@ -1,0 +1,10 @@
+version: "{build}"
+clone_depth: 1
+
+build_script:
+- cmd: curl_windows.bat
+- cmd: sdl_windows.bat
+
+artifacts:
+- path: build
+  name: libs_windows
