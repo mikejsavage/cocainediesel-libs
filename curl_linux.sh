@@ -60,6 +60,7 @@ cd curlbuild
 ./configure --enable-debug --disable-optimize $flags
 make -j$(nproc --all)
 cd ..
+
 cp curlbuild/lib/.libs/libcurl.a build/linux-debug
 
 rm -r curlbuild
@@ -69,6 +70,7 @@ cd curlbuild
 ./configure --disable-debug --enable-optimize $flags
 make -j$(nproc --all)
 cd ..
+
 cp curlbuild/lib/.libs/libcurl.a build/linux-release
 
 rm -r curlbuild
