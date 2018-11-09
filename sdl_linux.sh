@@ -3,17 +3,17 @@
 mkdir -p build/linux-debug
 mkdir -p build/linux-release
 
-flags=
-flags+=" --enable-static"
-flags+=" --disable-shared"
-flags+=" --disable-haptic"
-flags+=" --disable-diskaudio"
-flags+=" --disable-dummyaudio"
-flags+=" --disable-video-dummy"
-flags+=" --disable-video-opengles"
-flags+=" --disable-video-vulkan"
-flags+=" --disable-dbus"
-flags+=" --disable-input-tslib"
+flags="\
+--enable-static \
+--disable-shared \
+--disable-haptic \
+--disable-diskaudio \
+--disable-dummyaudio \
+--disable-video-dummy \
+--disable-video-opengles \
+--disable-video-vulkan \
+--disable-dbus \
+--disable-input-tslib"
 
 cp -r SDL2-2.0.9 sdlbuild
 cd sdlbuild
