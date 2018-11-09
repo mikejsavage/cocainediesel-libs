@@ -1,6 +1,7 @@
 mkdir build
-mkdir build\windows-debug
-mkdir build\windows-release
+mkdir build\sdl
+mkdir build\sdl\windows-debug
+mkdir build\sdl\windows-release
 
 set FLAGS=%FLAGS% -DSDL_SHARED=OFF
 set FLAGS=%FLAGS% -DFORCE_STATIC_VCRT=ON
@@ -16,8 +17,8 @@ msbuild /maxcpucount /p:Configuration=Release SDL2-static.vcxproj
 
 cd ..\..
 
-cp sdlbuild\build\Debug\SDL2d.lib build\windows-debug\SDL2.lib
-cp sdlbuild\build\SDL2-static.dir\Debug\SDL2-static.pdb build\windows-debug\SDL2.pdb
-cp sdlbuild\build\Release\SDL2.lib build\windows-release\SDL2.lib
+cp sdlbuild\build\Debug\SDL2d.lib build\sdl\windows-debug\SDL2.lib
+cp sdlbuild\build\SDL2-static.dir\Debug\SDL2-static.pdb build\sdl\windows-debug\SDL2.pdb
+cp sdlbuild\build\Release\SDL2.lib build\sdl\windows-release\SDL2.lib
 
 rmdir /S /Q sdlbuild

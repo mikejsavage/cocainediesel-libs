@@ -1,7 +1,7 @@
 #! /bin/sh
 
-mkdir -p build/linux-debug
-mkdir -p build/linux-release
+mkdir -p build/sdl/linux-debug
+mkdir -p build/sdl/linux-release
 
 flags="\
 --enable-static \
@@ -21,10 +21,10 @@ cd sdlbuild
 make -j$(nproc --all)
 cd ..
 
-cp sdlbuild/build/.libs/libSDL2.a build/linux-debug
-cp sdlbuild/build/.libs/libSDL2main.a build/linux-debug
+cp sdlbuild/build/.libs/libSDL2.a build/sdl/linux-debug
+cp sdlbuild/build/.libs/libSDL2main.a build/sdl/linux-debug
 
-cp sdlbuild/build/.libs/libSDL2.a build/linux-release
-cp sdlbuild/build/.libs/libSDL2main.a build/linux-release
+cp sdlbuild/build/.libs/libSDL2.a build/sdl/linux-release
+cp sdlbuild/build/.libs/libSDL2main.a build/sdl/linux-release
 
 rm -r sdlbuild

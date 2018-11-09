@@ -1,7 +1,7 @@
 #! /bin/sh
 
-mkdir -p build/linux-debug
-mkdir -p build/linux-release
+mkdir -p build/curl/linux-debug
+mkdir -p build/curl/linux-release
 
 flags="\
 --enable-static \
@@ -59,7 +59,7 @@ cd curlbuild
 make -j$(nproc --all)
 cd ..
 
-cp curlbuild/lib/.libs/libcurl.a build/linux-debug
+cp curlbuild/lib/.libs/libcurl.a build/curl/linux-debug
 
 rm -r curlbuild
 
@@ -69,6 +69,6 @@ cd curlbuild
 make -j$(nproc --all)
 cd ..
 
-cp curlbuild/lib/.libs/libcurl.a build/linux-release
+cp curlbuild/lib/.libs/libcurl.a build/curl/linux-release
 
 rm -r curlbuild

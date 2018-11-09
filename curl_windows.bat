@@ -1,6 +1,7 @@
 mkdir build
-mkdir build\windows-debug
-mkdir build\windows-release
+mkdir build\curl
+mkdir build\curl\windows-debug
+mkdir build\curl\windows-release
 
 set FLAGS=%FLAGS% -DBUILD_CURL_EXE=OFF
 set FLAGS=%FLAGS% -DBUILD_SHARED_LIBS=OFF
@@ -18,8 +19,8 @@ msbuild /maxcpucount /p:Configuration=Release libcurl.vcxproj
 
 cd ..\..
 
-cp curlbuild\lib\Debug\libcurl-d.lib build\windows-debug\curl.lib
-cp curlbuild\lib\libcurl.dirDebug\libcurl.pdb build\windows-debug\curl.pdb
-cp curlbuild\lib\Release\libcurl.lib build\windows-release\curl.lib
+cp curlbuild\lib\Debug\libcurl-d.lib build\curl\windows-debug\curl.lib
+cp curlbuild\lib\libcurl.dirDebug\libcurl.pdb build\curl\windows-debug\curl.pdb
+cp curlbuild\lib\Release\libcurl.lib build\curl\windows-release\curl.lib
 
 rmdir /S /Q curlbuild
