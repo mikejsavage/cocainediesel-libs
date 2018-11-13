@@ -29,3 +29,5 @@ cd ..
 cp openalbuild/libopenal.a build/openal/linux-release
 
 rm -r openalbuild
+
+cp openal-soft-openal-soft-1.19.1/include/AL/*.h build/openal

@@ -72,3 +72,5 @@ cd ..
 cp curlbuild/lib/.libs/libcurl.a build/curl/linux-release
 
 rm -r curlbuild
+
+cp curl-7.62.0/include/curl/*.h build/curl

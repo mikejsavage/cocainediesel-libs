@@ -28,3 +28,5 @@ cp sdlbuild/build/.libs/libSDL2.a build/sdl/linux-release
 cp sdlbuild/build/.libs/libSDL2main.a build/sdl/linux-release
 
 rm -r sdlbuild
+
+cp SDL2-2.0.9/include/*.h build/sdl
