@@ -29,6 +29,7 @@ flags="\
 --disable-tls-srp \
 --disable-unix-sockets \
 --disable-cookies \
+--without-pic \
 --without-zlib \
 --without-brotli \
 --without-default-ssl-backend \
