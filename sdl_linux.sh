@@ -22,10 +22,7 @@ make -j$(nproc --all)
 cd ..
 
 cp sdlbuild/build/.libs/libSDL2.a build/sdl/linux-debug
-cp sdlbuild/build/.libs/libSDL2main.a build/sdl/linux-debug
-
 cp sdlbuild/build/.libs/libSDL2.a build/sdl/linux-release
-cp sdlbuild/build/.libs/libSDL2main.a build/sdl/linux-release
 
 rm -r sdlbuild
 
