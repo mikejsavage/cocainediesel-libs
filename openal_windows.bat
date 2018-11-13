@@ -20,9 +20,9 @@ msbuild /maxcpucount /p:Configuration=Release OpenAL.vcxproj
 cd ..
 
 cp openalbuild\Debug\OpenAL32.lib build\openal\windows-debug\openal.lib
-cp openalbuild\OpenAL.dir\Debug\OpenAL.pdb build\openal\windows-debug\openal.pdb
-cp openalbuild\Debug\common.lib build\openal\windows-debug\common.lib
-cp openalbuild\Debug\common.pdb build\openal\windows-debug\common.pdb
+cp openalbuild\OpenAL.dir\Debug\OpenAL.pdb build\openal\windows-debug
+cp openalbuild\Debug\common.lib build\openal\windows-debug
+cp openalbuild\Debug\common.pdb build\openal\windows-debug
 
 cp openalbuild\Release\OpenAL32.lib build\openal\windows-release\openal.lib
 
