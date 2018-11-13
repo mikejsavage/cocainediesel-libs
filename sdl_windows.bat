@@ -12,13 +12,17 @@ mkdir sdlbuild\build
 cd sdlbuild\build
 
 cmake -G "Visual Studio 14 2015 Win64" %FLAGS% ..
-msbuild /maxcpucount SDL2-static.vcxproj
-msbuild /maxcpucount /p:Configuration=Release SDL2-static.vcxproj
+msbuild /maxcpucount ALL_BUILD.vcxproj
+msbuild /maxcpucount /p:Configuration=Release ALL_BUILD.vcxproj
 
 cd ..\..
 
-cp sdlbuild\build\Debug\SDL2d.lib build\sdl\windows-debug\SDL2.lib
-cp sdlbuild\build\SDL2-static.dir\Debug\SDL2-static.pdb build\sdl\windows-debug
-cp sdlbuild\build\Release\SDL2.lib build\sdl\windows-release
+copy sdlbuild\build\Debug\SDL2d.lib build\sdl\windows-debug\SDL2.lib
+copy sdlbuild\build\Debug\SDL2maind.lib build\sdl\windows-debug\SDL2main.lib
+copy sdlbuild\build\SDL2main.dir\Debug\SDL2main.pdb build\sdl\windows-debug
+copy sdlbuild\build\SDL2-static.dir\Debug\SDL2-static.pdb build\sdl\windows-debug
+
+copy sdlbuild\build\Release\SDL2.lib build\sdl\windows-release
+copy sdlbuild\build\Release\SDL2main.lib build\sdl\windows-release
 
 rmdir /S /Q sdlbuild
