@@ -1,5 +1,7 @@
 #! /bin/sh
 
+set -x
+
 mkdir -p build/librocket/linux-debug
 mkdir -p build/librocket/linux-release
 
