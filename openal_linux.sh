@@ -22,7 +22,7 @@ rm -r openalbuild
 
 cp -r openal-soft-openal-soft-1.19.1 openalbuild
 cd openalbuild
-cmake -DCMAKE_BUILD_TYPE=Debug $flags .
+cmake -DCMAKE_BUILD_TYPE=Release $flags .
 make -j$(nproc --all)
 cd ..
 
