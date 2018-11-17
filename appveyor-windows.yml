@@ -2,8 +2,10 @@ version: "{build}"
 clone_depth: 1
 
 build_script:
-- cmd: openal_windows.bat
 - cmd: curl_windows.bat
+- cmd: freetype_windows.bat
+- cmd: librocket_windows.bat
+- cmd: openal_windows.bat
 - cmd: sdl_windows.bat
 
 artifacts:
