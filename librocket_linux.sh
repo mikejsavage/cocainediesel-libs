@@ -35,6 +35,6 @@ cd ..
 cp librocketbuild/librocketdebug.a build/librocket/linux-debug/librocket.a
 cp librocketbuild/librocket.a build/librocket/linux-release/librocket.a
 
-# rm -r librocketbuild
+rm -r librocketbuild
 
-cp -r libRocket/Include build/librocket
+cp -r libRocket/Include/* build/librocket
