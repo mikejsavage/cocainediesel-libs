@@ -25,7 +25,7 @@ ar rs librocketdebug.a $debugobjs
 
 for f in $srcs; do
 	g++ -c $RELEASECXXFLAGS -o "$f.o" "$f"
-	debugobjs+="$f.o "
+	releaseobjs+="$f.o "
 done
 
 ar rs librocket.a $releaseobjs
