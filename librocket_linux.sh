@@ -10,26 +10,25 @@ cp -r libRocket librocketbuild
 cd librocketbuild
 
 srcs="Source/Core/*.cpp Source/Controls/*.cpp"
-debugobjs=""
-releaseobjs=""
+objs="Source/Core/*.o Source/Controls/*.o"
 
 CXXFLAGS="-std=c++11 -IInclude -DROCKET_STATIC_LIB"
 DEBUGCXXFLAGS="$CXXFLAGS -g"
 RELEASECXXFLAGS="$CXXFLAGS -O2"
 
 for f in $srcs; do
-	g++ -c $DEBUGCXXFLAGS -o "$f.od" "$f"
-	debugobjs+="$f.od "
+	g++ -c $DEBUGCXXFLAGS -o "$f.o" "$f"
 done
 
-ar rs librocketdebug.a $debugobjs
+ar rs librocketdebug.a $objs
+
+rm $objs
 
 for f in $srcs; do
 	g++ -c $RELEASECXXFLAGS -o "$f.o" "$f"
-	releaseobjs+="$f.o "
 done
 
-ar rs librocket.a $releaseobjs
+ar rs librocket.a $objs
 
 cd ..
 
