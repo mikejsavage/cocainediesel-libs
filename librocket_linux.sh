@@ -10,7 +10,7 @@ srcs="Source/Core/*.cpp Source/Controls/*.cpp"
 debugobjs=""
 releaseobjs=""
 
-CXXFLAGS="-IInclude"
+CXXFLAGS="-IInclude -DROCKET_STATIC_LIB"
 DEBUGCXXFLAGS="$CXXFLAGS -g"
 RELEASECXXFLAGS="$CXXFLAGS -O2"
 
