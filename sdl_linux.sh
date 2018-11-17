@@ -1,5 +1,7 @@
 #! /bin/sh
 
+set -e
+
 mkdir -p build/sdl/linux-debug
 mkdir -p build/sdl/linux-release
 

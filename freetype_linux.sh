@@ -1,5 +1,7 @@
 #! /bin/sh
 
+set -e
+
 mkdir -p build/freetype/linux-debug
 mkdir -p build/freetype/linux-release
 

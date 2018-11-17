@@ -1,5 +1,7 @@
 #! /bin/sh
 
+set -e
+
 mkdir -p build/openal/linux-debug
 mkdir -p build/openal/linux-release
 

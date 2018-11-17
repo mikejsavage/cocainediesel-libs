@@ -1,5 +1,6 @@
 #! /bin/sh
 
+set -e
 set -x
 
 mkdir -p build/librocket/linux-debug

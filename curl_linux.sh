@@ -1,5 +1,7 @@
 #! /bin/sh
 
+set -e
+
 mkdir -p build/curl/linux-debug
 mkdir -p build/curl/linux-release
 
