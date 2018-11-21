@@ -13,7 +13,7 @@ msbuild /maxcpucount /p:Configuration=Release ALL_BUILD.vcxproj
 cd ..
 
 copy zlibbuild\Debug\zlibstaticd.lib build\zlib\windows-debug\zlib.lib
-copy zlibbuild\zlibstatic.dir\Debug\zlibstatic.pdb build\zlib\windows-debug\zlib.pdb
+copy zlibbuild\zlibstatic.dir\Debug\zlibstatic.pdb build\zlib\windows-debug
 
 copy zlibbuild\Release\zlibstatic.lib build\zlib\windows-release\zlib.lib
 
