@@ -12,7 +12,7 @@ cmake -DCMAKE_BUILD_TYPE=Debug .
 make -j$(nproc --all)
 cd ..
 
-cp zlibbuild/libzlibstaticd.a build/zlib/linux-debug/libzlib.a
+cp zlibbuild/libz.a build/zlib/linux-debug/libzlib.a
 
 rm -r zlibbuild
 
@@ -23,7 +23,7 @@ cmake -DCMAKE_BUILD_TYPE=Release .
 make -j$(nproc --all)
 cd ..
 
-cp zlibbuild/libzlibstatic.a build/zlib/linux-debug/libzlib.a
+cp zlibbuild/libz.a build/zlib/linux-release/libzlib.a
 
 rm -r zlibbuild
 
