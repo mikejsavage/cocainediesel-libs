@@ -17,9 +17,9 @@ msbuild /maxcpucount /p:Configuration=Release ALL_BUILD.vcxproj
 
 cd ..\..\..
 
-copy zstdbuild\build\Debug\zstd_staticd.lib build\zstd\windows-debug\zstd.lib
-copy zstdbuild\build\zstd_static.dir\Debug\zstd_static.pdb build\zstd\windows-debug\zstd.lib
+copy zstdbuild\build\cmake\lib\Debug\zstd_static.lib build\zstd\windows-debug\zstd.lib
+copy zstdbuild\build\cmake\lib\libzstd_static.dir\Debug\libzstd_static.pdb build\zstd\windows-debug\zstd.pdb
 
-copy zstdbuild\build\Release\zstd_static.lib build\zstd\windows-release\zstd.lib
+copy zstdbuild\build\cmake\lib\Release\zstd_static.lib build\zstd\windows-release\zstd.lib
 
 rmdir /S /Q zstdbuild
