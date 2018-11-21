@@ -21,8 +21,6 @@ cd ..
 
 copy openalbuild\Debug\OpenAL32.lib build\openal\windows-debug\openal.lib
 copy openalbuild\OpenAL.dir\Debug\OpenAL.pdb build\openal\windows-debug
-copy openalbuild\Debug\common.lib build\openal\windows-debug
-copy openalbuild\Debug\common.pdb build\openal\windows-debug
 
 copy openalbuild\Release\OpenAL32.lib build\openal\windows-release\openal.lib
 
