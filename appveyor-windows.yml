@@ -9,6 +9,7 @@ build_script:
 # # - cmd: librocket_windows.bat
 # - cmd: openal_windows.bat
 # - cmd: sdl_windows.bat
+- cmd: zlib_windows.bat
 - cmd: zstd_windows.bat
 
 artifacts:
