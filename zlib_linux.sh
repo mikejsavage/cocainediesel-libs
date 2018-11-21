@@ -26,3 +26,6 @@ cd ..
 cp zlibbuild/libzlibstatic.a build/zlib/linux-debug/libzlib.a
 
 rm -r zlibbuild
+
+cp zlib-1.2.11/zlib.h build/zlib
+cp zlib-1.2.11/zconf.h build/zlib

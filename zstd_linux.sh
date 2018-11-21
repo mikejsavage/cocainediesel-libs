@@ -22,3 +22,5 @@ cd ../..
 cp zstdbuild/lib/libzstd.a build/zstd/linux-release
 
 rm -r zstdbuild
+
+cp zstd-1.3.7/lib/zstd.h build/zstd
