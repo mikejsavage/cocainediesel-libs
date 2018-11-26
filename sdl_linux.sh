@@ -9,12 +9,14 @@ flags="\
 --enable-static \
 --disable-shared \
 --disable-haptic \
---disable-diskaudio \
---disable-dummyaudio \
+--disable-joystick \
+--disable-audio \
+--disable-sensor \
 --disable-video-dummy \
 --disable-video-opengles \
 --disable-video-vulkan \
 --disable-dbus \
+--disable-libsamplerate \
 --disable-input-tslib"
 
 cp -r SDL2-2.0.9 sdlbuild
@@ -25,6 +27,8 @@ cd ..
 
 cp sdlbuild/build/.libs/libSDL2.a build/sdl/linux-debug
 cp sdlbuild/build/.libs/libSDL2.a build/sdl/linux-release
+
+cp sdlbuild/include/SDL_config.h build/sdl/SDL_config_linux.h
 
 rm -r sdlbuild
 
