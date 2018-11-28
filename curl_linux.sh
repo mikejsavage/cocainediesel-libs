@@ -2,6 +2,8 @@
 
 set -e
 
+./mbedtls_linux.sh
+
 mkdir -p build/curl/linux-debug
 mkdir -p build/curl/linux-release
 
@@ -40,7 +42,6 @@ flags="\
 --without-ssl \
 --without-gnutls \
 --without-polarssl \
---without-mbedtls \
 --without-cyassl \
 --without-wolfssl \
 --without-mesalink \
@@ -58,7 +59,7 @@ flags="\
 
 cp -r curl-7.62.0 curlbuild
 cd curlbuild
-./configure --enable-debug --disable-optimize $flags
+./configure --enable-debug --disable-optimize --with-mbedtls="$PWD/../mbedtlsbuild/debugbuild" $flags
 make -j$(nproc --all)
 cd ..
 
@@ -68,12 +69,13 @@ rm -r curlbuild
 
 cp -r curl-7.62.0 curlbuild
 cd curlbuild
-./configure --disable-debug --enable-optimize $flags
+./configure --disable-debug --enable-optimize --with-mbedtls="$PWD/../mbedtlsbuild/releasebuild" $flags
 make -j$(nproc --all)
 cd ..
 
 cp curlbuild/lib/.libs/libcurl.a build/curl/linux-release
 
 rm -r curlbuild
+rm -r mbedtlsbuild
 
 cp curl-7.62.0/include/curl/*.h build/curl
