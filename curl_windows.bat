@@ -3,6 +3,7 @@ mkdir build\curl
 mkdir build\curl\windows-debug
 mkdir build\curl\windows-release
 
+set FLAGS=
 set FLAGS=%FLAGS% -DBUILD_CURL_EXE=OFF
 set FLAGS=%FLAGS% -DBUILD_SHARED_LIBS=OFF
 REM set FLAGS=%FLAGS% -DCURL_STATIC_CRT=ON

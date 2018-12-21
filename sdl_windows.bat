@@ -3,6 +3,7 @@ mkdir build\sdl
 mkdir build\sdl\windows-debug
 mkdir build\sdl\windows-release
 
+set FLAGS=
 set FLAGS=%FLAGS% -DSDL_SHARED=OFF
 REM set FLAGS=%FLAGS% -DFORCE_STATIC_VCRT=ON
 set FLAGS=%FLAGS% -DSDL_AUDIO_ENABLED_BY_DEFAULT=OFF

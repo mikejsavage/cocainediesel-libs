@@ -3,6 +3,7 @@ mkdir build\zstd
 mkdir build\zstd\windows-debug
 mkdir build\zstd\windows-release
 
+set FLAGS=
 set FLAGS=%FLAGS% -DZSTD_MULTITHREAD_SUPPORT=OFF
 set FLAGS=%FLAGS% -DZSTD_BUILD_PROGRAMS=OFF
 set FLAGS=%FLAGS% -DZSTD_BUILD_SHARED=OFF

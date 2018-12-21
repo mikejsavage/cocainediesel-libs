@@ -3,6 +3,7 @@ mkdir build\freetype
 mkdir build\freetype\windows-debug
 mkdir build\freetype\windows-release
 
+set FLAGS=
 set FLAGS=%FLAGS% -DBUILD_SHARED_LIBS=OFF
 set FLAGS=%FLAGS% -DCMAKE_DISABLE_FIND_PACKAGE_HarfBuzz=TRUE
 set FLAGS=%FLAGS% -DCMAKE_DISABLE_FIND_PACKAGE_BZip2=TRUE
