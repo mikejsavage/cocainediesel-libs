@@ -3,23 +3,17 @@ mkdir build\librocket
 mkdir build\librocket\windows-debug
 mkdir build\librocket\windows-release
 
-set CXXFLAGS=/MP /I..\..\Include /DROCKET_STATIC_LIB /EHsc
-set RELEASECXXFLAGS=%CXXFLAGS% /MD /O2
+set FLAGS=-DBUILD_SHARED_LIBS=OFF
 
 robocopy libRocket librocketbuild /E /NFL /NDL /NJH /NJS /NP
-cd librocketbuild
+cd librocketbuild\Build
 
-cd Source\Core
-cl /c %RELEASECXXFLAGS% *.cpp
-cd ..\Controls
-cl /c %RELEASECXXFLAGS% *.cpp
+cmake -G "Visual Studio 14 2015 Win64" %FLAGS% .
+msbuild /maxcpucount /p:Configuration=Release ALL_BUILD.vcxproj
+
 cd ..\..
 
-lib -OUT:rocket.lib Source\Core\*.obj Source\Controls\*.obj
-
-cd ..
-
-copy librocketbuild\rocket.lib build\librocket\windows-debug
-copy librocketbuild\rocket.lib build\librocket\windows-release
+dir librocketbuild
+dir librocketbuild\Build
 
 rmdir /S /Q librocketbuild

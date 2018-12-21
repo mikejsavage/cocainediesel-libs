@@ -1,40 +1,35 @@
 #! /bin/sh
 
 set -e
-set -x
 
 mkdir -p build/librocket/linux-debug
 mkdir -p build/librocket/linux-release
 
+flags="
+-DBUILD_SHARED_LIBS=OFF
+-DCMAKE_CXX_FLAGS=-fPIC"
+
 cp -r libRocket librocketbuild
-cd librocketbuild
+cd librocketbuild/Build
+cmake -DCMAKE_BUILD_TYPE=Debug $flags .
+make -j$(nproc --all) RocketCore RocketControls
+cd ../..
 
-srcs="Source/Core/*.cpp Source/Controls/*.cpp"
-objs="Source/Core/*.o Source/Controls/*.o"
-
-CXXFLAGS="-std=c++11 -IInclude -DROCKET_STATIC_LIB"
-DEBUGCXXFLAGS="$CXXFLAGS -g"
-RELEASECXXFLAGS="$CXXFLAGS -O2"
-
-for f in $srcs; do
-	g++ -c $DEBUGCXXFLAGS -o "$f.o" "$f"
-done
-
-ar rs librocketdebug.a $objs
-
-rm $objs
-
-for f in $srcs; do
-	g++ -c $RELEASECXXFLAGS -o "$f.o" "$f"
-done
-
-ar rs librocket.a $objs
-
-cd ..
-
-cp librocketbuild/librocketdebug.a build/librocket/linux-debug/librocket.a
-cp librocketbuild/librocket.a build/librocket/linux-release/librocket.a
+cp librocketbuild/Build/libRocketCore.a build/librocket/linux-debug
+cp librocketbuild/Build/libRocketControls.a build/librocket/linux-debug
 
 rm -r librocketbuild
 
-cp -r libRocket/Include/* build/librocket
+cp -r libRocket librocketbuild
+cd librocketbuild/Build
+cmake -DCMAKE_BUILD_TYPE=Release $flags .
+make -j$(nproc --all) RocketCore RocketControls
+cd ../..
+
+cp librocketbuild/Build/libRocketCore.a build/librocket/linux-release
+cp librocketbuild/Build/libRocketControls.a build/librocket/linux-release
+
+rm -r librocketbuild
+
+cp libRocket/Include/Rocket build/librocket
+rm -r build/librocket/Include/Debugger build/librocket/Include/Debugger.h
