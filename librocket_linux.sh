@@ -31,5 +31,5 @@ cp librocketbuild/Build/libRocketControls.a build/librocket/linux-release
 
 rm -r librocketbuild
 
-cp libRocket/Include/Rocket build/librocket
+cp -r libRocket/Include/Rocket build/librocket
 rm -r build/librocket/Include/Debugger build/librocket/Include/Debugger.h
