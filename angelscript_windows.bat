@@ -12,7 +12,7 @@ msbuild /maxcpucount /p:Configuration=Release Angelscript.vcxproj
 
 cd ..\..\..\..
 
-copy angelscriptbuild\angelscript\lib\Debug\Angelscriptd.lib build\angelscript\windows-debug\angelscript.lib
+copy angelscriptbuild\angelscript\lib\Debug\Angelscript.lib build\angelscript\windows-debug\angelscript.lib
 
 copy angelscriptbuild\angelscript\lib\Release\Angelscript.lib build\angelscript\windows-release\angelscript.lib
 
