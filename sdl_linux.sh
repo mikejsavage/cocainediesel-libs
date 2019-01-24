@@ -25,8 +25,8 @@ cd sdlbuild
 make -j$(nproc --all)
 cd ..
 
-cp sdlbuild/build/.libs/libSDL2.a build/sdl/linux-debug
-cp sdlbuild/build/.libs/libSDL2.a build/sdl/linux-release
+cp sdlbuild/build/.libs/libSDL2.a build/sdl/linux-debug\libsdl.a
+cp sdlbuild/build/.libs/libSDL2.a build/sdl/linux-release\libsdl.a
 
 cp sdlbuild/include/SDL_config.h build/sdl/SDL_config_linux.h
 
