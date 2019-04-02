@@ -14,7 +14,7 @@ robocopy freetype-2.9.1 freetypebuild /E /NFL /NDL /NJH /NJS /NP
 mkdir freetypebuild\build
 cd freetypebuild\build
 
-cmake -G "Visual Studio 14 2015 Win64" %FLAGS% ..
+cmake -G "Visual Studio 16 2019" -A x64 %FLAGS% ..
 msbuild /maxcpucount ALL_BUILD.vcxproj
 msbuild /maxcpucount /p:Configuration=Release ALL_BUILD.vcxproj
 

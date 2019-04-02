@@ -17,7 +17,7 @@ robocopy SDL2-2.0.9 sdlbuild /E /NFL /NDL /NJH /NJS /NP
 mkdir sdlbuild\build
 cd sdlbuild\build
 
-cmake -G "Visual Studio 14 2015 Win64" %FLAGS% ..
+cmake -G "Visual Studio 16 2019" -A x64 %FLAGS% ..
 msbuild /maxcpucount ALL_BUILD.vcxproj
 msbuild /maxcpucount /p:Configuration=Release ALL_BUILD.vcxproj
 

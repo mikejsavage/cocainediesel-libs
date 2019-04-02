@@ -12,7 +12,7 @@ REM set FLAGS=%FLAGS% -DZSTD_USE_STATIC_RUNTIME=ON
 robocopy zstd-1.3.7 zstdbuild /E /NFL /NDL /NJH /NJS /NP
 cd zstdbuild\build\cmake
 
-cmake -G "Visual Studio 14 2015 Win64" %FLAGS% .
+cmake -G "Visual Studio 16 2019" -A x64 %FLAGS% .
 msbuild /maxcpucount ALL_BUILD.vcxproj
 msbuild /maxcpucount /p:Configuration=Release ALL_BUILD.vcxproj
 

@@ -14,7 +14,7 @@ set FLAGS=%FLAGS% -DALSOFT_AMBDEC_PRESETS=OFF
 robocopy openal-soft-openal-soft-1.19.1 openalbuild /E /NFL /NDL /NJH /NJS /NP
 cd openalbuild
 
-cmake -G "Visual Studio 14 2015 Win64" %FLAGS% .
+cmake -G "Visual Studio 16 2019" -A x64 %FLAGS% .
 msbuild /maxcpucount ALL_BUILD.vcxproj
 msbuild /maxcpucount /p:Configuration=Release OpenAL.vcxproj
 
