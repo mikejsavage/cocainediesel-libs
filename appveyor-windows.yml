@@ -2,7 +2,11 @@ version: "{build}"
 clone_depth: 1
 
 build_script:
-- cmd: call "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\Build\\vcvarsall.bat" x86_amd64
+- cmd: dir "C:\\Program Files (x86)\\Microsoft Visual Studio"
+- cmd: dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019"
+- cmd: dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community"
+- cmd: dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\WC"
+- cmd: call "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\Build\\vcvars64.bat"
 - cmd: angelscript_windows.bat
 - cmd: curl_windows.bat
 - cmd: freetype_windows.bat
