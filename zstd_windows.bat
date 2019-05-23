@@ -9,7 +9,7 @@ set FLAGS=%FLAGS% -DZSTD_MULTITHREAD_SUPPORT=OFF
 set FLAGS=%FLAGS% -DZSTD_BUILD_PROGRAMS=OFF
 set FLAGS=%FLAGS% -DZSTD_BUILD_SHARED=OFF
 
-robocopy zstd-1.3.7 zstdbuild /E /NFL /NDL /NJH /NJS /NP
+robocopy zstd-1.4.0 zstdbuild /E /NFL /NDL /NJH /NJS /NP
 cd zstdbuild\build\cmake
 
 cmake -G "Visual Studio 16 2019" -A x64 %FLAGS% .
