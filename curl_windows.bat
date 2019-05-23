@@ -12,7 +12,7 @@ set FLAGS=%FLAGS% -DCURL_ZLIB=OFF
 set FLAGS=%FLAGS% -DCMAKE_USE_WINSSL=ON
 set FLAGS=%FLAGS% -DCURL_WINDOWS_SSPI=OFF
 
-robocopy curl-7.62.0 curlbuild /E /NFL /NDL /NJH /NJS /NP
+robocopy curl-7.65.0 curlbuild /E /NFL /NDL /NJH /NJS /NP
 cd curlbuild
 
 cmake -G "Visual Studio 16 2019" -A x64 %FLAGS% .
