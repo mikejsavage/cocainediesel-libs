@@ -6,6 +6,9 @@ mkdir build\zlib\windows-release
 robocopy zlib-1.2.11 zlibbuild /E /NFL /NDL /NJH /NJS /NP
 cd zlibbuild
 
+echo string(REPLACE "/MD" "/MT" CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG}") >> CMakeLists.txt
+echo string(REPLACE "/MD" "/MT" CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE}") >> CMakeLists.txt
+
 cmake -G "Visual Studio 16 2019" -A x64 .
 msbuild /maxcpucount ALL_BUILD.vcxproj
 msbuild /maxcpucount /p:Configuration=Release ALL_BUILD.vcxproj

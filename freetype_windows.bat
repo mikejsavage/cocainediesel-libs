@@ -14,6 +14,11 @@ robocopy freetype-2.9.1 freetypebuild /E /NFL /NDL /NJH /NJS /NP
 mkdir freetypebuild\build
 cd freetypebuild\build
 
+REM Freetype has no static CRT option and no easy way to hack it in from batch
+REM So add the following lines above the cpack stuff:
+REM string(REPLACE "/MD" "/MT" CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG}")
+REM string(REPLACE "/MD" "/MT" CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE}")
+
 cmake -G "Visual Studio 16 2019" -A x64 %FLAGS% ..
 msbuild /maxcpucount ALL_BUILD.vcxproj
 msbuild /maxcpucount /p:Configuration=Release ALL_BUILD.vcxproj

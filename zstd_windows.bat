@@ -4,10 +4,10 @@ mkdir build\zstd\windows-debug
 mkdir build\zstd\windows-release
 
 set FLAGS=
+set FLAGS=%FLAGS% -DZSTD_USE_STATIC_RUNTIME=ON
 set FLAGS=%FLAGS% -DZSTD_MULTITHREAD_SUPPORT=OFF
 set FLAGS=%FLAGS% -DZSTD_BUILD_PROGRAMS=OFF
 set FLAGS=%FLAGS% -DZSTD_BUILD_SHARED=OFF
-REM set FLAGS=%FLAGS% -DZSTD_USE_STATIC_RUNTIME=ON
 
 robocopy zstd-1.3.7 zstdbuild /E /NFL /NDL /NJH /NJS /NP
 cd zstdbuild\build\cmake
