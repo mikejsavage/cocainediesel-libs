@@ -30,6 +30,6 @@ cd ..
 cp glfwbuild/debugbuild/src/libglfw3.a build/glfw3/linux-debug
 cp glfwbuild/releasebuild/src/libglfw3.a build/glfw3/linux-release
 
-cp -r glfw-3.3.2/include/GLFW/* build/glfw3
+cp -r glfw-3.3.2/include/* build/glfw3
 
 rm -r glfwbuild
