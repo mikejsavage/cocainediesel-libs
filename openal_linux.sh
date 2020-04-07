@@ -12,7 +12,7 @@ flags="\
 -DALSOFT_TESTS=OFF
 -DALSOFT_AMBDEC_PRESETS=OFF"
 
-cp -r openal-soft-openal-soft-1.19.1 openalbuild
+cp -r openal-soft-openal-soft-1.20.1 openalbuild
 cd openalbuild
 cmake -DCMAKE_BUILD_TYPE=Debug $flags .
 make -j$(nproc --all)
@@ -22,7 +22,7 @@ cp openalbuild/libopenal.a build/openal/linux-debug
 
 rm -r openalbuild
 
-cp -r openal-soft-openal-soft-1.19.1 openalbuild
+cp -r openal-soft-openal-soft-1.20.1 openalbuild
 cd openalbuild
 cmake -DCMAKE_BUILD_TYPE=Release $flags .
 make -j$(nproc --all)
@@ -32,4 +32,4 @@ cp openalbuild/libopenal.a build/openal/linux-release
 
 rm -r openalbuild
 
-cp openal-soft-openal-soft-1.19.1/include/AL/*.h build/openal
+cp openal-soft-openal-soft-1.20.1/include/AL/*.h build/openal
