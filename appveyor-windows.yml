@@ -10,7 +10,6 @@ build_script:
 - cmd: glfw_windows.bat
 - cmd: openal_windows.bat
 - cmd: zlib_windows.bat
-- cmd: zstd_windows.bat
 
 artifacts:
 - path: build
