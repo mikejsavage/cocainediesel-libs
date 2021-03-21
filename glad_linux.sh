@@ -1,6 +1,6 @@
 #! /bin/sh
 
-extensions="GL_AMD_debug_output,GL_EXT_texture_compression_s3tc,GL_EXT_texture_filter_anisotropic,GL_EXT_texture_sRGB,GL_EXT_texture_sRGB_decode,GL_KHR_debug"
+extensions="GL_AMD_debug_output,GL_EXT_texture_compression_s3tc,GL_EXT_texture_filter_anisotropic,GL_EXT_texture_sRGB,GL_EXT_texture_sRGB_decode,GL_KHR_debug,GL_NVX_gpu_memory_info"
 
 mkdir -p build/glad
 
