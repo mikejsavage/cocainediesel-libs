@@ -7,8 +7,8 @@ build_script:
 - cmd: angelscript_windows.bat
 - cmd: curl_windows.bat
 - cmd: freetype_windows.bat
-- cmd: glfw_windows.bat
 - cmd: openal_windows.bat
+- cmd: sdl_windows.bat
 - cmd: zlib_windows.bat
 - cmd: zstd_windows.bat
 
