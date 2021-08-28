@@ -5,7 +5,6 @@ image: Ubuntu
 build_script:
 - sh: sudo apt-get -y update
 - sh: sudo apt-get -y install libxcursor-dev libxi-dev libxrandr-dev libxinerama-dev libegl1-mesa-dev libxkbcommon-dev libgl-dev libasound2-dev libpulse-dev
-- sh: ./angelscript_linux.sh
 - sh: ./curl_linux.sh
 - sh: ./freetype_linux.sh
 - sh: ./glad_linux.sh
