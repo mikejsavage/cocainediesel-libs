@@ -13,6 +13,9 @@ robocopy zstd-1.4.9 zstdbuild /E /NFL /NDL /NJH /NJS /NP
 cd zstdbuild\build\cmake
 
 cmake -G "Visual Studio 16 2019" -A x64 %FLAGS% .
+
+rem Don't link against any CRT. RelWithDebInfo links a release CRT (/MT) and we want it for debug builds of the game (/MTd)
+rem The subset of zstd we use doesn't need the CRT so this works out ok
 set CL=/Zl
 msbuild /maxcpucount /p:Configuration=RelWithDebInfo ALL_BUILD.vcxproj
 msbuild /maxcpucount /p:Configuration=Release ALL_BUILD.vcxproj
