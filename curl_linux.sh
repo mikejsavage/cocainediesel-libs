@@ -50,7 +50,6 @@ flags="\
 --without-ca-path \
 --without-ca-fallback \
 --without-libpsl \
---without-libmetalink \
 --without-librtmp \
 --without-winidn \
 --without-libidn2 \
