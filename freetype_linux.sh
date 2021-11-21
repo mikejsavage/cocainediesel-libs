@@ -12,7 +12,7 @@ flags="\
 -DCMAKE_DISABLE_FIND_PACKAGE_PNG=TRUE \
 -DCMAKE_DISABLE_FIND_PACKAGE_ZLIB=TRUE"
 
-cp -r freetype-2.9.1 freetypebuild
+cp -r freetype-2.11.0 freetypebuild
 cd freetypebuild
 
 mkdir debugbuild
@@ -32,7 +32,7 @@ cd ..
 cp freetypebuild/debugbuild/libfreetyped.a build/freetype/linux-debug/libfreetype.a
 cp freetypebuild/releasebuild/libfreetype.a build/freetype/linux-release
 
-cp -r freetype-2.9.1/include/* build/freetype
+cp -r freetype-2.11.0/include/* build/freetype
 cp -r freetypebuild/debugbuild/include/* build/freetype
 
 rm -r freetypebuild

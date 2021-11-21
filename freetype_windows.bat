@@ -10,7 +10,7 @@ set FLAGS=%FLAGS% -DCMAKE_DISABLE_FIND_PACKAGE_BZip2=TRUE
 set FLAGS=%FLAGS% -DCMAKE_DISABLE_FIND_PACKAGE_PNG=TRUE
 set FLAGS=%FLAGS% -DCMAKE_DISABLE_FIND_PACKAGE_ZLIB=TRUE
 
-robocopy freetype-2.9.1 freetypebuild /E /NFL /NDL /NJH /NJS /NP
+robocopy freetype-2.11.0 freetypebuild /E /NFL /NDL /NJH /NJS /NP
 mkdir freetypebuild\build
 cd freetypebuild\build
 
