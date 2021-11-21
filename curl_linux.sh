@@ -38,7 +38,6 @@ flags="\
 --without-brotli \
 --without-default-ssl-backend \
 --without-winssl \
---without-darwinssl \
 --without-ssl \
 --without-gnutls \
 --without-polarssl \
