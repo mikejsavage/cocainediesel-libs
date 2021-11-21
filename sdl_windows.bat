@@ -24,7 +24,7 @@ msbuild /maxcpucount /p:Configuration=Release ALL_BUILD.vcxproj
 cd ..\..
 
 copy sdlbuild\build\Debug\SDL2d.lib build\sdl2\windows-debug\SDL2.lib
-copy sdlbuild\build\SDL2-static.dir\Debug\SDL2-static.pdb build\sdl2\windows-debug
+copy sdlbuild\build\Debug\SDL2-static.pdb build\sdl2\windows-debug
 
 copy sdlbuild\build\Release\SDL2.lib build\sdl2\windows-release\SDL2.lib
 

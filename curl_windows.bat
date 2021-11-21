@@ -23,7 +23,7 @@ msbuild /maxcpucount /p:Configuration=Release libcurl.vcxproj
 cd ..\..
 
 copy curlbuild\lib\Debug\libcurl-d.lib build\curl\windows-debug\curl.lib
-copy curlbuild\lib\libcurl.dir\Debug\libcurl.pdb build\curl\windows-debug
+copy curlbuild\lib\Debug\libcurl.pdb build\curl\windows-debug
 copy curlbuild\lib\Release\libcurl.lib build\curl\windows-release\curl.lib
 
 REM rmdir /S /Q curlbuild

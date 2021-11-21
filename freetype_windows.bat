@@ -26,7 +26,7 @@ msbuild /maxcpucount /p:Configuration=Release ALL_BUILD.vcxproj
 cd ..\..
 
 copy freetypebuild\build\Debug\freetyped.lib build\freetype\windows-debug\freetype.lib
-copy freetypebuild\build\freetype.dir\Debug\freetype.pdb build\freetype\windows-debug
+copy freetypebuild\build\Debug\freetype.pdb build\freetype\windows-debug
 
 copy freetypebuild\build\Release\freetype.lib build\freetype\windows-release
 

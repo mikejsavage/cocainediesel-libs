@@ -20,7 +20,7 @@ msbuild /maxcpucount /p:Configuration=Release ALL_BUILD.vcxproj
 cd ..\..
 
 copy glfwbuild\build\src\Debug\glfw3.lib build\glfw3\windows-debug
-copy glfwbuild\build\src\glfw.dir\Debug\glfw.pdb build\glfw3\windows-debug
+copy glfwbuild\build\src\Debug\glfw.pdb build\glfw3\windows-debug
 
 copy glfwbuild\build\src\Release\glfw3.lib build\glfw3\windows-release
 
