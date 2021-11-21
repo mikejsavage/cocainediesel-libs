@@ -7,7 +7,7 @@ mkdir -p build/mbedtls/linux-release
 
 flags="-DENABLE_PROGRAMS=OFF -DENABLE_TESTING=OFF"
 
-cp -r mbedtls-2.16.1 mbedtlsbuild
+cp -r mbedtls-3.0.0 mbedtlsbuild
 cd mbedtlsbuild
 
 mkdir debugbuild
