@@ -24,7 +24,7 @@ set CL=
 cd ..\..\..
 
 copy zstdbuild\build\cmake\lib\RelWithDebInfo\zstd_static.lib build\zstd\windows-debug\zstd.lib
-copy zstdbuild\build\cmake\lib\RelWithDebInfo\libzstd_static.pdb build\zstd\windows-debug
+copy zstdbuild\build\cmake\lib\RelWithDebInfo\zstd_static.pdb build\zstd\windows-debug
 
 copy zstdbuild\build\cmake\lib\Release\zstd_static.lib build\zstd\windows-release\zstd.lib
 

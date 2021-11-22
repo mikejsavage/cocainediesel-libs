@@ -21,7 +21,7 @@ msbuild /maxcpucount /p:Configuration=Release OpenAL.vcxproj
 cd ..
 
 copy openalbuild\Debug\OpenAL32.lib build\openal\windows-debug\openal.lib
-copy openalbuild\Debug\OpenAL.pdb build\openal\windows-debug
+copy openalbuild\Debug\OpenAL32.pdb build\openal\windows-debug
 
 copy openalbuild\Release\OpenAL32.lib build\openal\windows-release\openal.lib
 
