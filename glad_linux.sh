@@ -8,6 +8,7 @@ extensions="$extensions,GL_EXT_texture_sRGB_decode"
 extensions="$extensions,GL_ARB_buffer_storage"
 extensions="$extensions,GL_ARB_clip_control"
 extensions="$extensions,GL_ARB_direct_state_access"
+extensions="$extensions,GL_EXT_direct_state_access"
 extensions="$extensions,GL_NVX_gpu_memory_info"
 
 mkdir -p build/glad
