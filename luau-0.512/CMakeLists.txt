@@ -61,6 +61,12 @@ set(LUAU_OPTIONS)
 if(MSVC)
     list(APPEND LUAU_OPTIONS /D_CRT_SECURE_NO_WARNINGS) # We need to use the portable CRT functions.
     list(APPEND LUAU_OPTIONS /MP) # Distribute single project compilation across multiple cores
+
+    if(LUAU_STATIC_CRT)
+        set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+        set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
+        set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
+    endif()
 else()
     list(APPEND LUAU_OPTIONS -Wall) # All warnings
 endif()

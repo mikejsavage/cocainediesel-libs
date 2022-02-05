@@ -7,6 +7,7 @@ build_script:
 - cmd: curl_windows.bat
 - cmd: freetype_windows.bat
 - cmd: glfw_windows.bat
+- cmd: luau_windows.bat
 - cmd: openal_windows.bat
 # - cmd: sdl_windows.bat
 - cmd: zlib_windows.bat
