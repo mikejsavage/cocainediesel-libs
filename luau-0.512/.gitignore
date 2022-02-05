@@ -1,0 +1,10 @@
+/build/
+/build[.-]*/
+/coverage/
+/.vs/
+/.vscode/
+/fuzz/luau.pb.*
+/crash-*
+/default.prof*
+/fuzz-*
+/luau
