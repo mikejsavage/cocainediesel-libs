@@ -9,6 +9,7 @@ build_script:
 - sh: ./freetype_linux.sh
 - sh: ./glad_linux.sh
 - sh: ./glfw_linux.sh
+- sh: ./luau_linux.sh
 - sh: ./openal_linux.sh
   # - sh: ./sdl_linux.sh
 - sh: ./zlib_linux.sh
