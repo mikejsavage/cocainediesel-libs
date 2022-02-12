@@ -26,4 +26,4 @@ copy curlbuild\lib\Debug\libcurl-d.lib build\curl\windows-debug\curl.lib
 copy curlbuild\lib\Debug\libcurl-d.pdb build\curl\windows-debug
 copy curlbuild\lib\Release\libcurl.lib build\curl\windows-release\curl.lib
 
-REM rmdir /S /Q curlbuild
+rmdir /S /Q curlbuild
