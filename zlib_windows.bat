@@ -3,7 +3,7 @@ mkdir build\zlib
 mkdir build\zlib\windows-debug
 mkdir build\zlib\windows-release
 
-robocopy zlib-1.2.11 zlibbuild /E /NFL /NDL /NJH /NJS /NP
+robocopy zlib-1.2.12 zlibbuild /E /NFL /NDL /NJH /NJS /NP
 cd zlibbuild
 
 echo string(REPLACE "/MD" "/MT" CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG}") >> CMakeLists.txt
