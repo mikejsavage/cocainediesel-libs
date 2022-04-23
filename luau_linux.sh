@@ -5,7 +5,7 @@ set -e
 mkdir -p build/luau/linux-debug
 mkdir -p build/luau/linux-release
 
-cp -r luau-0.512 luaubuild
+cp -r luau-0.524 luaubuild
 cd luaubuild
 
 make -j$(nproc --all) build/debug/libluauast.a build/debug/libluaucompiler.a build/debug/libluauvm.a
@@ -18,5 +18,5 @@ cp luaubuild/build/release/*.a build/luau/linux-release
 
 rm -r luaubuild
 
-cp luau-0.512/Compiler/include/*.h build/luau
-cp luau-0.512/VM/include/*.h build/luau
+cp luau-0.524/Compiler/include/*.h build/luau
+cp luau-0.524/VM/include/*.h build/luau

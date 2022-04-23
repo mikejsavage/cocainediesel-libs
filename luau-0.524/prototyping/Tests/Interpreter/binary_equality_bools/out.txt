@@ -1,0 +1,4 @@
+ANNOTATED PROGRAM:
+return true == false
+
+RAN WITH RESULT: false

@@ -8,7 +8,7 @@ set FLAGS=%FLAGS% -DLUAU_BUILD_CLI=OFF
 set FLAGS=%FLAGS% -DLUAU_BUILD_TESTS=OFF
 set FLAGS=%FLAGS% -DLUAU_STATIC_CRT=ON
 
-robocopy luau-0.512 luaubuild /E /NFL /NDL /NJH /NJS /NP
+robocopy luau-0.524 luaubuild /E /NFL /NDL /NJH /NJS /NP
 cd luaubuild
 
 cmake -G "Visual Studio 16 2019" -A x64 %FLAGS% .

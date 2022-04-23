@@ -1,0 +1,10 @@
+*~
+*.agdai
+Main
+MAlonzo
+PrettyPrinter
+Interpreter
+!Tests/Interpreter
+!Tests/PrettyPrinter
+.ghc.*
+test-failures/
