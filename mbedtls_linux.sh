@@ -26,8 +26,8 @@ cd ..
 
 cd ..
 
-cp mbedtlsbuild/debugbuild/lib64/*.a build/mbedtls/linux-debug
-cp mbedtlsbuild/releasebuild/lib64/*.a build/mbedtls/linux-release
+cp mbedtlsbuild/debugbuild/library/*.a build/mbedtls/linux-debug
+cp mbedtlsbuild/releasebuild/library/*.a build/mbedtls/linux-release
 
 cp -r mbedtlsbuild/include/mbedtls build/mbedtls
 cp -r mbedtlsbuild/include/psa build/mbedtls
