@@ -12,7 +12,6 @@ build_script:
 - sh: ./glfw_linux.sh
 - sh: ./luau_linux.sh
 - sh: ./openal_linux.sh
-  # - sh: ./sdl_linux.sh
 - sh: ./yoga_linux.sh
 - sh: ./zstd_linux.sh
 
