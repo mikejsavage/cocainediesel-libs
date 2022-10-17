@@ -55,7 +55,7 @@ flags="\
 --without-libidn2 \
 --without-nghttp2"
 
-cp -r curl-7.80.0 curlbuild
+cp -r curl-7.85.0 curlbuild
 cd curlbuild
 ./configure --enable-debug --disable-optimize --with-mbedtls="$PWD/../mbedtlsbuild/debugbuild" $flags
 make -j$(nproc --all)
@@ -65,7 +65,7 @@ cp curlbuild/lib/.libs/libcurl.a build/curl/linux-debug
 
 rm -r curlbuild
 
-cp -r curl-7.80.0 curlbuild
+cp -r curl-7.85.0 curlbuild
 cd curlbuild
 ./configure --disable-debug --enable-optimize --with-mbedtls="$PWD/../mbedtlsbuild/releasebuild" $flags
 make -j$(nproc --all)
@@ -76,4 +76,4 @@ cp curlbuild/lib/.libs/libcurl.a build/curl/linux-release
 rm -r curlbuild
 rm -r mbedtlsbuild
 
-cp curl-7.80.0/include/curl/*.h build/curl
+cp curl-7.85.0/include/curl/*.h build/curl
