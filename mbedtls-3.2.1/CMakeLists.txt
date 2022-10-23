@@ -20,12 +20,6 @@
 # until our infrastructure catches up.
 cmake_minimum_required(VERSION 3.5.1)
 
-if(STATIC_CRT)
-    cmake_minimum_required(VERSION 3.15)
-    cmake_policy(SET CMP0091 NEW)
-    set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-endif()
-
 include(CMakePackageConfigHelpers)
 
 # https://cmake.org/cmake/help/latest/policy/CMP0011.html
