@@ -10,6 +10,7 @@ build_script:
 - cmd: glfw_windows.bat
 - cmd: luau_windows.bat
 - cmd: openal_windows.bat
+# - cmd: sdl_windows.bat
 - cmd: yoga_windows.bat
 - cmd: zstd_windows.bat
 
