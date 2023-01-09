@@ -6,11 +6,13 @@ mkdir -p build/glfw3/linux-debug
 mkdir -p build/glfw3/linux-release
 
 flags="\
+-DGLFW_BUILD_X11=ON \
+-DGLFW_BUILD_WAYLAND=ON \
 -DGLFW_BUILD_EXAMPLES=OFF \
 -DGLFW_BUILD_TESTS=OFF \
 -DGLFW_BUILD_DOCS=OFF"
 
-cp -r glfw-3.3.7 glfwbuild
+cp -r glfw-3.4-g57cbded0 glfwbuild
 cd glfwbuild
 
 mkdir debugbuild
@@ -30,6 +32,6 @@ cd ..
 cp glfwbuild/debugbuild/src/libglfw3.a build/glfw3/linux-debug
 cp glfwbuild/releasebuild/src/libglfw3.a build/glfw3/linux-release
 
-cp -r glfw-3.3.7/include/* build/glfw3
+cp -r glfw-3.4-g57cbded0/include/* build/glfw3
 
 rm -r glfwbuild

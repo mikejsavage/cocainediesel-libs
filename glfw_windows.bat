@@ -9,7 +9,7 @@ set FLAGS=%FLAGS% -DGLFW_BUILD_TESTS=OFF
 set FLAGS=%FLAGS% -DGLFW_BUILD_DOCS=OFF
 set FLAGS=%FLAGS% -DUSE_MSVC_RUNTIME_LIBRARY_DLL=OFF
 
-robocopy glfw-3.3.7 glfwbuild /E /NFL /NDL /NJH /NJS /NP
+robocopy glfw-3.3.8 glfwbuild /E /NFL /NDL /NJH /NJS /NP
 mkdir glfwbuild\build
 cd glfwbuild\build
 
