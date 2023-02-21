@@ -1,0 +1,11 @@
+version: "{build}"
+clone_depth: 1
+image: macos-monterey
+
+build_script:
+- sh: ./glfw_macos.sh
+- sh: ./zstd_macos.sh
+
+artifacts:
+- path: build
+  name: libs_macos
