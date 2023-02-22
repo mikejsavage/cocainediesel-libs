@@ -8,12 +8,6 @@ mkdir -p build/glfw3/macos-release
 export MACOSX_DEPLOYMENT_TARGET="10.13"
 flags="-DGLFW_BUILD_EXAMPLES=OFF -DGLFW_BUILD_TESTS=OFF -DGLFW_BUILD_DOCS=OFF"
 
-# env:
-#   MACOSX_DEPLOYMENT_TARGET: 10.12
-# run: |
-#   cmake -Bbuild -GXcode '-DCMAKE_OSX_ARCHITECTURES=arm64;x86_64'
-#   cmake --build build --config Release
-
 cp -r glfw-3.3.8 glfwbuild
 cd glfwbuild
 
