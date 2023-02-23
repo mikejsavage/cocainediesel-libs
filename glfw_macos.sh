@@ -18,6 +18,6 @@ cmake --build build --config Release
 cd ..
 
 cp glfwbuild/build/src/Debug/libglfw3.a build/glfw3/macos-debug
-cp glfwbuild/build/src/Release/libglfw3.a build/glfw3/macos-debug
+cp glfwbuild/build/src/Release/libglfw3.a build/glfw3/macos-release
 
 rm -r glfwbuild
