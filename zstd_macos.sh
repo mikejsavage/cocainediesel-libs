@@ -6,7 +6,6 @@ mkdir -p build/zstd/macos-debug
 mkdir -p build/zstd/macos-release
 
 # TODO: zstd asm stuff fails to build so don't do this for now
-# export MACOSX_DEPLOYMENT_TARGET="10.13"
 # flags="-DZSTD_BUILD_PROGRAMS=OFF -DZSTD_BUILD_SHARED=OFF -DZSTD_MULTITHREAD_SUPPORT=OFF"
 #
 # cp -r zstd-1.5.4 zstdbuild

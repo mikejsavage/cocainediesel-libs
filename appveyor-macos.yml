@@ -2,6 +2,9 @@ version: "{build}"
 clone_depth: 1
 image: macos-monterey
 
+environment:
+  MACOSX_DEPLOYMENT_TARGET: "10.13"
+
 build_script:
 - sh: ./glfw_macos.sh
 - sh: ./zstd_macos.sh
