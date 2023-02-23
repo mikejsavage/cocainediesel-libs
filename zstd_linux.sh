@@ -15,4 +15,4 @@ cp zstdbuild/lib/libzstd.a build/zstd/linux-release
 
 rm -r zstdbuild
 
-cp zstd-1.5.0/lib/zstd.h build/zstd
+cp zstd-1.5.4/lib/zstd.h build/zstd
