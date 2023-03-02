@@ -3,7 +3,6 @@ clone_depth: 1
 image: macos-monterey
 
 environment:
-  MACOSX_DEPLOYMENT_TARGET: "10.13"
   ZERO_AR_DATE: "1"
 
 build_script:

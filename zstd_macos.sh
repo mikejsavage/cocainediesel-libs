@@ -11,7 +11,7 @@ mkdir -p build/zstd/macos-release
 # cp -r zstd-1.5.4 zstdbuild
 # cd zstdbuild
 #
-# cmake -Bbuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" $flags build/cmake
+# cmake -Bbuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 $flags build/cmake
 # cmake --build build --config Release
 #
 # cd ..

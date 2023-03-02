@@ -10,7 +10,7 @@ flags="-DGLFW_BUILD_EXAMPLES=OFF -DGLFW_BUILD_TESTS=OFF -DGLFW_BUILD_DOCS=OFF"
 cp -r glfw-3.3.8 glfwbuild
 cd glfwbuild
 
-cmake -Bbuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" $flags
+cmake -Bbuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 $flags
 cmake --build build --config Debug
 cmake --build build --config Release
 
