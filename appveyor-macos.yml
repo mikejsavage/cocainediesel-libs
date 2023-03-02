@@ -6,12 +6,12 @@ environment:
   ZERO_AR_DATE: "1"
 
 build_script:
-- sh: ./discord_linux.sh
-- sh: ./freetype_linux.sh
+- sh: ./discord_macos.sh
+- sh: ./freetype_macos.sh
 - sh: ./glfw_macos.sh
 - sh: ./luau_macos.sh
-- sh: ./openal_linux.sh
-- sh: ./yoga_linux.sh
+- sh: ./openal_macos.sh
+- sh: ./yoga_macos.sh
 - sh: ./zstd_macos.sh
 
 artifacts:
