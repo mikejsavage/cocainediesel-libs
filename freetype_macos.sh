@@ -15,7 +15,7 @@ flags="\
 cp -r freetype-2.11.0 freetypebuild
 cd freetypebuild
 
-cmake -Bbuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 .
+cmake -Bbuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 $flags .
 cmake --build build --config Debug
 cmake --build build --config Release
 
