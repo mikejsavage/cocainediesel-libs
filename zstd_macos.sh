@@ -28,12 +28,12 @@ cd zstdbuild/build/single_file_libs
 sed -i .bak "s:#define ZSTD_MULTITHREAD:// #DEFINE ZSTD_MULTITHREAD:" zstd.c
 
 flags="-c -O3 -DNDEBUG -mmacosx-version-min=10.13"
-clang zstd.c -arch arm64 -o zstd.arm64.o $flags
-clang zstd.c -arch x86_64 -o zstd.x64.o $flags
+clang zstd.c -arch arm64 -o zstd-arm64.o $flags
+clang zstd.c -arch x86_64 -o zstd-x64.o $flags
 
-ar rs libzstd.arm64.a zstd.arm64.o
-ar rs libzstd.x64.a zstd.x64.o
-lipo libzstd.arm64.a libzstd.x64.a -create -output libzstd.a
+ar r libzstd-arm64.a zstd-arm64.o
+ar r libzstd-x64.a zstd-x64.o
+lipo libzstd-arm64.a libzstd-x64.a -create -output libzstd.a
 
 cd ../../..
 
