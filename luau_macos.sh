@@ -10,7 +10,7 @@ flags="-DLUAU_BUILD_CLI=OFF -DLUAU_BUILD_TESTS=OFF"
 cp -r luau-0.524 luaubuild
 cd luaubuild
 
-cmake -Bbuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 .
+cmake -Bbuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 .
 cmake --build build --config Debug
 cmake --build build --config Release
 

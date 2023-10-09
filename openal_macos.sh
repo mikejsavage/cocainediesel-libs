@@ -14,7 +14,7 @@ flags="\
 cp -r openal-soft-1.21.1 openalbuild
 cd openalbuild
 
-cmake -Bbuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 $flags .
+cmake -Bbuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 $flags .
 cmake --build build --config Debug
 cmake --build build --config Release
 

@@ -11,7 +11,7 @@ mkdir -p build/zstd/macos-release
 # cp -r zstd-1.5.4 zstdbuild
 # cd zstdbuild
 #
-# cmake -Bbuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 $flags build/cmake
+# cmake -Bbuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 $flags build/cmake
 # cmake --build build --config Release
 #
 # cd ..
@@ -27,7 +27,7 @@ cd zstdbuild/build/single_file_libs
 ./create_single_file_library.sh
 sed -i .bak "s:#define ZSTD_MULTITHREAD:// #DEFINE ZSTD_MULTITHREAD:" zstd.c
 
-flags="-c -O3 -DNDEBUG -mmacosx-version-min=10.13"
+flags="-c -O3 -DNDEBUG -mmacosx-version-min=10.15"
 clang zstd.c -arch arm64 -o zstd-arm64.o $flags
 clang zstd.c -arch x86_64 -o zstd-x64.o $flags
 

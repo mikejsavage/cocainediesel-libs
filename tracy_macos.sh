@@ -19,7 +19,7 @@ capstone_flags="\
 -DCAPSTONE_ARM64_SUPPORT=ON \
 -DCAPSTONE_X86_SUPPORT=ON"
 
-cmake -Bbuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 $capstone_flags .
+cmake -Bbuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 $capstone_flags .
 cmake --build build --config Release
 
 cd ..
@@ -35,7 +35,7 @@ tracy_gui_ldflags="\
 ../../../../build/freetype/macos-release/libfreetype.a"
 null_pkg_config="$(pwd)/null-pkg-config:$PATH"
 
-tracy_client_flags="-c -std=c++11 -mmacosx-version-min=10.13"
+tracy_client_flags="-c -std=c++11 -mmacosx-version-min=10.15"
 
 cp -r tracy-0.9.1 tracybuild
 cd tracybuild
