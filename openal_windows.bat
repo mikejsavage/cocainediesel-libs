@@ -6,15 +6,20 @@ mkdir build\openal\windows-release
 set FLAGS=
 set FLAGS=%FLAGS% -DLIBTYPE=STATIC
 set FLAGS=%FLAGS% -DFORCE_STATIC_VCRT=ON
+set FLAGS=%FLAGS% -DALSOFT_REQUIRE_SSE4_1=ON
+set FLAGS=%FLAGS% -DALSOFT_BACKEND_WINMM=OFF
+set FLAGS=%FLAGS% -DALSOFT_BACKEND_DSOUND=OFF
+set FLAGS=%FLAGS% -DALSOFT_BACKEND_WASAPI=OFF
+set FLAGS=%FLAGS% -DALSOFT_BACKEND_WAVE=OFF
 set FLAGS=%FLAGS% -DALSOFT_UTILS=OFF
 set FLAGS=%FLAGS% -DALSOFT_EXAMPLES=OFF
-set FLAGS=%FLAGS% -DALSOFT_TESTS=OFF
-set FLAGS=%FLAGS% -DALSOFT_AMBDEC_PRESETS=OFF
+set FLAGS=%FLAGS% -DALSOFT_NO_CONFIG_UTIL=ON
+set FLAGS=%FLAGS% -DALSOFT_INSTALL_AMBDEC_PRESETS=OFF
 
-robocopy openal-soft-1.21.1 openalbuild /E /NFL /NDL /NJH /NJS /NP
+robocopy openal-soft-1.23.1 openalbuild /E /NFL /NDL /NJH /NJS /NP
 cd openalbuild
 
-cmake -G "Visual Studio 16 2019" -A x64 %FLAGS% .
+cmake -G "Visual Studio 17 2022" -A x64 %FLAGS% .
 msbuild /maxcpucount ALL_BUILD.vcxproj
 msbuild /maxcpucount /p:Configuration=Release OpenAL.vcxproj
 
