@@ -6,7 +6,7 @@ mkdir build\yoga\windows-release
 robocopy yoga-1.19.0 yogabuild /E /NFL /NDL /NJH /NJS /NP
 cd yogabuild
 
-cmake -G "Visual Studio 16 2019" -A x64 .
+cmake -G "Visual Studio 17 2022" -A x64 .
 msbuild /maxcpucount yoga.vcxproj
 msbuild /maxcpucount /p:Configuration=Release yoga.vcxproj
 

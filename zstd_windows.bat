@@ -12,7 +12,7 @@ set FLAGS=%FLAGS% -DZSTD_BUILD_SHARED=OFF
 robocopy zstd-1.5.4 zstdbuild /E /NFL /NDL /NJH /NJS /NP
 cd zstdbuild\build\cmake
 
-cmake -G "Visual Studio 16 2019" -A x64 %FLAGS% .
+cmake -G "Visual Studio 17 2022" -A x64 %FLAGS% .
 
 rem Don't link against any CRT. RelWithDebInfo links a release CRT (/MT) and we want it for debug builds of the game (/MTd)
 rem The subset of zstd we use doesn't need the CRT so this works out ok

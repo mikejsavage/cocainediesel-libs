@@ -13,7 +13,7 @@ robocopy glfw-3.3.8 glfwbuild /E /NFL /NDL /NJH /NJS /NP
 mkdir glfwbuild\build
 cd glfwbuild\build
 
-cmake -G "Visual Studio 16 2019" -A x64 %FLAGS% ..
+cmake -G "Visual Studio 17 2022" -A x64 %FLAGS% ..
 msbuild /maxcpucount ALL_BUILD.vcxproj
 msbuild /maxcpucount /p:Configuration=Release ALL_BUILD.vcxproj
 

@@ -6,7 +6,7 @@ mkdir build\discord\windows-release
 robocopy discord-rpc discordbuild /E /NFL /NDL /NJH /NJS /NP
 cd discordbuild
 
-cmake -G "Visual Studio 16 2019" -A x64 .
+cmake -G "Visual Studio 17 2022" -A x64 .
 msbuild /maxcpucount discord.vcxproj
 msbuild /maxcpucount /p:Configuration=Release discord.vcxproj
 

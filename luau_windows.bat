@@ -11,7 +11,7 @@ set FLAGS=%FLAGS% -DLUAU_STATIC_CRT=ON
 robocopy luau-0.524 luaubuild /E /NFL /NDL /NJH /NJS /NP
 cd luaubuild
 
-cmake -G "Visual Studio 16 2019" -A x64 %FLAGS% .
+cmake -G "Visual Studio 17 2022" -A x64 %FLAGS% .
 
 msbuild /maxcpucount Luau.Compiler.vcxproj
 msbuild /maxcpucount Luau.VM.vcxproj

@@ -20,7 +20,7 @@ REM So add the following lines above the cpack stuff:
 REM string(REPLACE "/MD" "/MT" CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG}")
 REM string(REPLACE "/MD" "/MT" CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE}")
 
-cmake -G "Visual Studio 16 2019" -A x64 %FLAGS% ..
+cmake -G "Visual Studio 17 2022" -A x64 %FLAGS% ..
 msbuild /maxcpucount ALL_BUILD.vcxproj
 msbuild /maxcpucount /p:Configuration=Release ALL_BUILD.vcxproj
 

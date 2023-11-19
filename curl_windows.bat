@@ -15,7 +15,7 @@ set FLAGS=%FLAGS% -DCURL_WINDOWS_SSPI=OFF
 robocopy curl-7.85.0 curlbuild /E /NFL /NDL /NJH /NJS /NP
 cd curlbuild
 
-cmake -G "Visual Studio 16 2019" -A x64 %FLAGS% .
+cmake -G "Visual Studio 17 2022" -A x64 %FLAGS% .
 cd lib
 msbuild /maxcpucount libcurl.vcxproj
 msbuild /maxcpucount /p:Configuration=Release libcurl.vcxproj
