@@ -3,7 +3,7 @@ clone_depth: 1
 image: Visual Studio 2022
 
 build_script:
-- cmd: call "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\Build\\vcvars64.bat"
+- cmd: call "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\Build\\vcvars64.bat"
 - cmd: curl_windows.bat
 - cmd: discord_windows.bat
 - cmd: freetype_windows.bat
