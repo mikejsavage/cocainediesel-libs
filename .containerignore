@@ -1,0 +1,5 @@
+/Containerfile
+/*build
+/podman.sh
+/zig-cmake/zig-*
+/zig-cmake/zig.cmake
