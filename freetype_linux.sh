@@ -13,27 +13,20 @@ flags="\
 -DCMAKE_DISABLE_FIND_PACKAGE_PNG=TRUE \
 -DCMAKE_DISABLE_FIND_PACKAGE_ZLIB=TRUE"
 
-cp -r freetype-2.11.0 freetypebuild
+cp -r freetype-2.13.2 freetypebuild
 cd freetypebuild
 
-mkdir debugbuild
-cd debugbuild
-cmake -DCMAKE_BUILD_TYPE=Debug $flags ..
-make -j$(nproc --all)
-cd ..
-
-mkdir releasebuild
-cd releasebuild
-cmake -DCMAKE_BUILD_TYPE=Release $flags ..
-make -j$(nproc --all)
-cd ..
+cmake -Bdebugbuild $flags
+cmake --build debugbuild --config Debug --parallel $(nproc --all)
+cmake -Breleasebuild $flags
+cmake --build releasebuild --config Release --parallel $(nproc --all)
 
 cd ..
 
-cp freetypebuild/debugbuild/libfreetyped.a build/freetype/linux-debug/libfreetype.a
+cp freetypebuild/debugbuild/libfreetype.a build/freetype/linux-debug
 cp freetypebuild/releasebuild/libfreetype.a build/freetype/linux-release
 
-cp -r freetype-2.11.0/include/* build/freetype
+cp -r freetype-2.13.2/include/* build/freetype
 cp -r freetypebuild/debugbuild/include/* build/freetype
 
 rm -r freetypebuild
