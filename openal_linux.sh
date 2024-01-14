@@ -22,21 +22,16 @@ flags="\
 
 cp -r openal-soft-1.23.1 openalbuild
 cd openalbuild
-cmake -DCMAKE_BUILD_TYPE=Debug $flags .
-make -j$(nproc --all)
+
+cmake -Bdebugbuild $flags
+cmake --build debugbuild --config Debug --parallel $(nproc --all)
+cmake -Breleasebuild $flags
+cmake --build releasebuild --config Release --parallel $(nproc --all)
+
 cd ..
 
-cp openalbuild/libopenal.a build/openal/linux-debug
-
-rm -r openalbuild
-
-cp -r openal-soft-1.23.1 openalbuild
-cd openalbuild
-cmake -DCMAKE_BUILD_TYPE=Release $flags .
-make -j$(nproc --all)
-cd ..
-
-cp openalbuild/libopenal.a build/openal/linux-release
+cp openalbuild/debugbuild/libopenal.a build/openal/linux-debug
+cp openalbuild/releasebuild/libopenal.a build/openal/linux-release
 
 rm -r openalbuild
 

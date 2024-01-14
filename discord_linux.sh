@@ -8,17 +8,10 @@ mkdir -p build/discord/linux-release
 cp -r discord-rpc discordbuild
 cd discordbuild
 
-mkdir debugbuild
-cd debugbuild
-cmake -DCMAKE_BUILD_TYPE=Debug ..
-make -j$(nproc --all)
-cd ..
-
-mkdir releasebuild
-cd releasebuild
-cmake -DCMAKE_BUILD_TYPE=Release ..
-make -j$(nproc --all)
-cd ..
+cmake -Bdebugbuild
+cmake --build debugbuild --config Debug --parallel $(nproc --all)
+cmake -Breleasebuild
+cmake --build releasebuild --config Release --parallel $(nproc --all)
 
 cd ..
 

@@ -15,17 +15,10 @@ flags="\
 cp -r glfw-3.4-g57cbded0 glfwbuild
 cd glfwbuild
 
-mkdir debugbuild
-cd debugbuild
-cmake -DCMAKE_BUILD_TYPE=Debug $flags ..
-make -j$(nproc --all)
-cd ..
-
-mkdir releasebuild
-cd releasebuild
-cmake -DCMAKE_BUILD_TYPE=Release $flags ..
-make -j$(nproc --all)
-cd ..
+cmake -Bdebugbuild $flags
+cmake --build debugbuild --config Debug --parallel $(nproc --all)
+cmake -Breleasebuild $flags
+cmake --build releasebuild --config Release --parallel $(nproc --all)
 
 cd ..
 
