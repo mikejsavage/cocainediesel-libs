@@ -1,9 +1,6 @@
 #! /bin/sh
 
-set -e
-
-mkdir -p build/openal/linux-debug
-mkdir -p build/openal/linux-release
+. ./common_linux.sh
 
 flags="\
 -DLIBTYPE=STATIC \
@@ -19,20 +16,8 @@ flags="\
 -DALSOFT_EXAMPLES=OFF \
 -DALSOFT_NO_CONFIG_UTIL=ON \
 -DALSOFT_INSTALL_AMBDEC_PRESETS=OFF"
-
-cp -r openal-soft-1.23.1 openalbuild
-cd openalbuild
-
-cmake -Bdebugbuild $flags
-cmake --build debugbuild --config Debug --parallel $(nproc --all)
-cmake -Breleasebuild $flags
-cmake --build releasebuild --config Release --parallel $(nproc --all)
-
-cd ..
-
-cp openalbuild/debugbuild/libopenal.a build/openal/linux-debug
-cp openalbuild/releasebuild/libopenal.a build/openal/linux-release
-
-rm -r openalbuild
+standard_cmake openal openal-soft-1.23.1 libopenal.a "$flags"
 
 cp openal-soft-1.23.1/include/AL/*.h build/openal
+
+rm -r openalbuild
