@@ -1,5 +1,7 @@
 #! /bin/sh
 
+set -e
+
 extensions=""
 extensions="$extensions,GL_EXT_texture_compression_s3tc"
 extensions="$extensions,GL_EXT_texture_filter_anisotropic"
