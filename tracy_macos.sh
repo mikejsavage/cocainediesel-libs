@@ -28,7 +28,7 @@ cd ..
 tracy_gui_cflags="\
 -I../../../../capstone-4.0.2/include/capstone \
 -I../../../../glfw-3.3.8/include \
--I../../../../freetype-2.11.0/include"
+-I../../../../freetype-2.13.2/include"
 tracy_gui_ldflags="\
 ../../../../capstonebuild/build/Release/libcapstone.a \
 ../../../../build/glfw3/macos-release/libglfw3.a -framework IOKit \
@@ -79,4 +79,4 @@ cp tracybuild/profiler/build/unix/Tracy build/tracy/Tracy.macos
 cp tracybuild/public/libtracy-debug.a build/tracy/macos-debug/libtracy.a
 cp tracybuild/public/libtracy-release.a build/tracy/macos-release/libtracy.a
 
-rm -r capstonebuild tracybuild
+rm -rf capstonebuild tracybuild
