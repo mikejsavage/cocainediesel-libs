@@ -4,7 +4,7 @@ image: Ubuntu2204
 
 build_script:
 - sh: sudo apt-get -y update
-- sh: sudo apt-get -y install libxcursor-dev libxi-dev libxrandr-dev libxinerama-dev
+- sh: sudo apt-get -y install x11proto-dev libxcursor-dev libxi-dev libxrandr-dev libxinerama-dev
 - sh: sudo apt-get -y install libwayland-dev libxkbcommon-dev wayland-protocols extra-cmake-modules
 - sh: ./curl_linux.sh
 - sh: ./discord_linux.sh
