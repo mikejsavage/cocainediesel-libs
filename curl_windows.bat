@@ -16,14 +16,13 @@ robocopy curl-8.5.0 curlbuild /E /NFL /NDL /NJH /NJS /NP
 cd curlbuild
 
 cmake -G "Visual Studio 17 2022" -A x64 %FLAGS% .
-cd lib
-msbuild /maxcpucount libcurl.vcxproj
-msbuild /maxcpucount /p:Configuration=Release libcurl.vcxproj
+msbuild /maxcpucount ALL_BUILD.vcxproj
+msbuild /maxcpucount /p:Configuration=Release ALL_BUILD.vcxproj
 
-cd ..\..
+cd ..
 
 copy curlbuild\lib\Debug\libcurl-d.lib build\curl\windows-debug\curl.lib
-copy curlbuild\lib\libcurl.dir\Debug\libcurl.pdb build\curl\windows-debug
+copy curlbuild\lib\libcurl_object.dir\Debug\libcurl_object.pdb build\curl\windows-debug
 copy curlbuild\lib\Release\libcurl.lib build\curl\windows-release\curl.lib
 
-REM rmdir /S /Q curlbuild
+rmdir /S /Q curlbuild
