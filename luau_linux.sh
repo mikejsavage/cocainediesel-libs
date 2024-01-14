@@ -8,13 +8,17 @@ mkdir -p build/luau/linux-release
 cp -r luau-0.524 luaubuild
 cd luaubuild
 
-make -j$(nproc --all) build/debug/libluauast.a build/debug/libluaucompiler.a build/debug/libluauvm.a
-make -j$(nproc --all) config=release build/release/libluauast.a build/release/libluaucompiler.a build/release/libluauvm.a
+targets="Luau.Ast Luau.Compiler Luau.VM"
+
+cmake -Bdebugbuild
+cmake --build debugbuild --target $targets --config Debug --parallel $(nproc --all)
+cmake -Breleasebuild
+cmake --build releasebuild --target $targets --config Release --parallel $(nproc --all)
 
 cd ..
 
-cp luaubuild/build/debug/*.a build/luau/linux-debug
-cp luaubuild/build/release/*.a build/luau/linux-release
+cp luaubuild/debugbuild/*.a build/luau/linux-debug
+cp luaubuild/releasebuild/*.a build/luau/linux-release
 
 rm -r luaubuild
 
