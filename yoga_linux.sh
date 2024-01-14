@@ -5,26 +5,19 @@ set -e
 mkdir -p build/yoga/linux-debug
 mkdir -p build/yoga/linux-release
 
-cp -r yoga-1.19.0 yogabuild
+cp -r yoga-2.0.1 yogabuild
 cd yogabuild
 
-mkdir debug
-cd debug
-cmake -DCMAKE_BUILD_TYPE=Debug ..
-make -j$(nproc --all)
-cd ..
-
-mkdir release
-cd release
-cmake -DCMAKE_BUILD_TYPE=Release ..
-make -j$(nproc --all)
-cd ..
+cmake -Bdebugbuild
+cmake --build debugbuild --target yogacore --config Debug --parallel $(nproc --all)
+cmake -Breleasebuild
+cmake --build releasebuild --target yogacore --config Release --parallel $(nproc --all)
 
 cd ..
 
-cp yogabuild/debug/libyoga.a build/yoga/linux-debug
-cp yogabuild/release/libyoga.a build/yoga/linux-release
+cp yogabuild/debugbuild/yoga/libyogacore.a build/yoga/linux-debug
+cp yogabuild/releasebuild/yoga/libyogacore.a build/yoga/linux-release
 
 rm -r yogabuild
 
-cp yoga-1.19.0/yoga/*.h build/yoga
+cp yoga-2.0.1/yoga/*.h build/yoga
