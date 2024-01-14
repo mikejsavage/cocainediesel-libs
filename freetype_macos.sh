@@ -22,7 +22,7 @@ cmake --build build --config Release
 
 cd ..
 
-cp freetypebuild/build/Debug/libfreetype.a build/freetype/macos-debug
+cp freetypebuild/build/Debug/libfreetyped.a build/freetype/macos-debug/libfreetype.a
 cp freetypebuild/build/Release/libfreetype.a build/freetype/macos-release
 
-rm -r freetypebuild
+rm -rf freetypebuild

@@ -26,4 +26,4 @@ cd ..
 cp openalbuild/build/Debug/libopenal.a build/openal/macos-debug
 cp openalbuild/build/Release/libopenal.a build/openal/macos-release
 
-rm -r openalbuild
+rm -rf openalbuild

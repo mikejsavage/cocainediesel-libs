@@ -17,4 +17,4 @@ cd ..
 cp yogabuild/build/Debug/libyoga.a build/yoga/macos-debug
 cp yogabuild/build/Release/libyoga.a build/yoga/macos-release
 
-rm -r yogabuild
+rm -rf yogabuild

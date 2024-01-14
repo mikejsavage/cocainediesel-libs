@@ -17,4 +17,4 @@ cd ..
 cp discordbuild/build/Debug/libdiscord.a build/discord/macos-debug
 cp discordbuild/build/Release/libdiscord.a build/discord/macos-release
 
-rm -r discordbuild
+rm -rf discordbuild
