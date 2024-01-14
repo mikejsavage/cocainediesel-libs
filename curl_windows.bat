@@ -12,7 +12,7 @@ set FLAGS=%FLAGS% -DCURL_ZLIB=OFF
 set FLAGS=%FLAGS% -DCURL_USE_SCHANNEL=ON
 set FLAGS=%FLAGS% -DCURL_WINDOWS_SSPI=OFF
 
-robocopy curl-7.85.0 curlbuild /E /NFL /NDL /NJH /NJS /NP
+robocopy curl-8.5.0 curlbuild /E /NFL /NDL /NJH /NJS /NP
 cd curlbuild
 
 cmake -G "Visual Studio 17 2022" -A x64 %FLAGS% .
