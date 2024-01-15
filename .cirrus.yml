@@ -25,7 +25,7 @@ macos_task:
   name: "macOS"
   alias: cocaine_diesel_libs_macos
   macos_instance:
-    image: ghcr.io/cirruslabs/macos-ventura-base:latest
+    image: ghcr.io/cirruslabs/macos-sonoma-xcode:latest
     cpu: 4
     memory: 2G
   env:
