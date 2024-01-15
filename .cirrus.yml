@@ -1,0 +1,67 @@
+env:
+  CIRRUS_CLONE_DEPTH: 1
+
+windows_task:
+  name: "Windows"
+  alias: cocaine_diesel_libs_windows
+  windows_container:
+    image: cirrusci/windowsservercore:visualstudio2022
+    cpu: 4
+    memory: 4G
+  script:
+    - "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvarsall.bat\" amd64"
+    - curl_windows.bat
+    - discord_windows.bat
+    - freetype_windows.bat
+    - glfw_windows.bat
+    - luau_windows.bat
+    - openal_windows.bat
+    - yoga_windows.bat
+    - zstd_windows.bat
+  cocaine_diesel_libs_windows_artifacts:
+    path: "build/*"
+
+macos_task:
+  name: "macOS"
+  alias: cocaine_diesel_libs_macos
+  macos_instance:
+    image: ghcr.io/cirruslabs/macos-ventura-base:latest
+    cpu: 4
+    memory: 2G
+  env:
+    ZERO_AR_DATE: "1"
+  build_script:
+    - ./discord_macos.sh
+    - ./freetype_macos.sh
+    - ./glfw_macos.sh
+    - ./luau_macos.sh
+    - ./openal_macos.sh
+    - ./tracy_macos.sh
+    - ./yoga_macos.sh
+    - ./zstd_macos.sh
+  cocaine_diesel_libs_macos_artifacts:
+    path: "build/*"
+
+linux_task:
+  name: "Linux"
+  alias: cocaine_diesel_libs_linux
+  container:
+    image: alpine
+    cpu: 4
+    memory: 2G
+  install_script:
+    - apk add bash make cmake
+    - apk add libxcursor-dev libxi-dev libxrandr-dev libxinerama-dev libxkbcommon-dev
+    - apk add wayland-dev wayland-protocols
+  build_script:
+    - ./curl_linux.sh
+    - ./discord_linux.sh
+    - ./freetype_linux.sh
+    - ./glad_linux.sh
+    - ./glfw_linux.sh
+    - ./luau_linux.sh
+    - ./openal_linux.sh
+    - ./yoga_linux.sh
+    - ./zstd_linux.sh
+  cocaine_diesel_libs_linux_artifacts:
+    path: "build/*"
