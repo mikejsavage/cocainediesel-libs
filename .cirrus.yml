@@ -26,8 +26,6 @@ macos_task:
   alias: cocaine_diesel_libs_macos
   macos_instance:
     image: ghcr.io/cirruslabs/macos-sonoma-xcode:latest
-    cpu: 4
-    memory: 2G
   env:
     ZERO_AR_DATE: "1"
   build_script:
@@ -47,8 +45,8 @@ linux_task:
   alias: cocaine_diesel_libs_linux
   container:
     image: alpine
-    cpu: 4
-    memory: 2G
+    cpu: 8
+    memory: 4G
   install_script:
     - apk add bash make cmake
     - apk add libxcursor-dev libxi-dev libxrandr-dev libxinerama-dev libxkbcommon-dev
