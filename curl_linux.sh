@@ -15,7 +15,9 @@ flags="\
 -DMBEDTLS_LIBRARY=../build/mbedtls/linux-release/mbedtls.lib \
 -DMBEDX509_LIBRARY=../build/mbedtls/linux-release/mbedx509.lib \
 -DMBEDCRYPTO_LIBRARY=../build/mbedtls/linux-release/mbedcrypto.lib"
-standard_cmake curl curl-8.5.0 lib/libcurl.a "$flags"
+standard_cmake curl curl-8.5.0 lib/libcurl*.a "$flags"
+
+mv build/curl/linux-debug/libcurl-d.a build/curl/linux-debug/libcurl.a
 
 cp curl-8.5.0/include/curl/*.h build/curl
 
