@@ -5,7 +5,7 @@ image: Ubuntu2204
 build_script:
 - sh: sudo apt-get -y update
 - sh: sudo apt-get -y install wget xz-utils
-- sh: sudo apt-get -y install gcc-multilib make cmake ninja
+- sh: sudo apt-get -y install gcc-multilib make cmake ninja-build
 - sh: sudo apt-get -y install xorg-dev libxkbcommon-dev
 - sh: sudo apt-get -y install libwayland-dev wayland-protocols
 - sh: ./curl_linux.sh
