@@ -2,6 +2,8 @@
 
 . ./common_linux.sh
 
+grep "REPLACE \"/MD\" \"/MT\"" freetype-2.13.2/CMakeLists.txt
+
 flags="\
 -DBUILD_SHARED_LIBS=OFF \
 -DCMAKE_DISABLE_FIND_PACKAGE_BrotliDec=TRUE \
