@@ -6,8 +6,8 @@ windows_task:
   alias: cocaine_diesel_libs_windows
   windows_container:
     image: cirrusci/windowsservercore:visualstudio2022
-    cpu: 4
-    memory: 4G
+    cpu: 8
+    memory: 8G
   script:
     - "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvarsall.bat\" amd64"
     - curl_windows.bat
