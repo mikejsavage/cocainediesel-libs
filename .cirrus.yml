@@ -61,5 +61,6 @@ linux_task:
     - ./openal_linux.sh
     - ./yoga_linux.sh
     - ./zstd_linux.sh
+    - ls -R build
   cocaine_diesel_libs_linux_artifacts:
     path: "build/*"
