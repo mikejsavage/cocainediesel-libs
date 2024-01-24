@@ -19,7 +19,7 @@ windows_task:
     - yoga_windows.bat
     - zstd_windows.bat
   cocaine_diesel_libs_windows_artifacts:
-    path: "build/*"
+    path: "build/"
 
 macos_task:
   name: "macOS"
@@ -38,7 +38,7 @@ macos_task:
     - ./yoga_macos.sh
     - ./zstd_macos.sh
   cocaine_diesel_libs_macos_artifacts:
-    path: "build/*"
+    path: "build/**"
 
 linux_task:
   name: "Linux"
@@ -61,6 +61,5 @@ linux_task:
     - ./openal_linux.sh
     - ./yoga_linux.sh
     - ./zstd_linux.sh
-    - ls -R build
   cocaine_diesel_libs_linux_artifacts:
-    path: "build/*"
+    path: "build/**"
