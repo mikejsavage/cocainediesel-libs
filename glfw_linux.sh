@@ -9,8 +9,8 @@ flags="\
 -DGLFW_BUILD_TESTS=OFF \
 -DGLFW_BUILD_DOCS=OFF \
 -DX11_X11_LIB=linux_is_stupid"
-standard_cmake glfw3 glfw-3.4-g57cbded0 src/libglfw3.a "$flags"
+standard_cmake glfw3 glfw-3.4 src/libglfw3.a "$flags"
 
-cp -r glfw-3.4-g57cbded0/include/* build/glfw3
+cp -r glfw-3.4/include/* build/glfw3
 
 rm -r glfw3build

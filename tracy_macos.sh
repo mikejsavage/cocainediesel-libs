@@ -27,7 +27,7 @@ cd ..
 # tracy
 tracy_gui_cflags="\
 -I../../../../capstone-4.0.2/include/capstone \
--I../../../../glfw-3.3.8/include \
+-I../../../../glfw-3.4/include \
 -I../../../../freetype-2.13.2/include"
 tracy_gui_ldflags="\
 ../../../../capstonebuild/build/Release/libcapstone.a \
