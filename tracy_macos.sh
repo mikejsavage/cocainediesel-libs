@@ -24,6 +24,6 @@ cd ..
 
 cp tracybuild/debugbuild/Debug/libTracyClient.a build/tracy/macos-debug/libtracy.a
 cp tracybuild/releasebuild/Release/libTracyClient.a build/tracy/macos-release/libtracy.a
-cp tracybuild/profiler/build/tracy-profiler build/tracy/Tracy.macos
+cp tracybuild/profiler/build/tracy-profiler build/tracy/tracy.macos
 
 rm -rf tracybuild

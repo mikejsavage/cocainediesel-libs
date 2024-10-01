@@ -16,6 +16,7 @@ windows_task:
     - glfw_windows.bat
     - luau_windows.bat
     - openal_windows.bat
+    - tracy_windows.bat
     - yoga_windows.bat
     - zstd_windows.bat
   cocaine_diesel_libs_windows_artifacts:
