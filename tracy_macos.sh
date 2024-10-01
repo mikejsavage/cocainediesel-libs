@@ -37,7 +37,7 @@ null_pkg_config="$(pwd)/null-pkg-config:$PATH"
 
 tracy_client_flags="-c -std=c++11 -mmacosx-version-min=10.15"
 
-cp -r tracy-0.9.1 tracybuild
+cp -r tracy-0.11.1 tracybuild
 cd tracybuild
 
 # gui
