@@ -9,6 +9,6 @@ cmake --build build --config Release
 
 cd ..\..
 
-cp tracybuild\profiler\build\tracy-profiler.exe build\tracy\tracy.exe
+copy tracybuild\profiler\build\tracy-profiler.exe build\tracy\tracy.exe
 
-REM rmdir /S /Q tracybuild
+rmdir /S /Q tracybuild
