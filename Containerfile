@@ -15,5 +15,4 @@ RUN ./glad_linux.sh
 RUN ./glfw_linux.sh
 RUN ./luau_linux.sh
 RUN ./openal_linux.sh
-RUN ./yoga_linux.sh
 RUN ./zstd_linux.sh

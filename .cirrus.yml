@@ -17,7 +17,6 @@ windows_task:
     - luau_windows.bat
     - openal_windows.bat
     - tracy_windows.bat
-    - yoga_windows.bat
     - zstd_windows.bat
   cocaine_diesel_libs_windows_artifacts:
     path: "build/**"
@@ -36,7 +35,6 @@ macos_task:
     - ./luau_macos.sh
     - ./openal_macos.sh
     - ./tracy_macos.sh
-    - ./yoga_macos.sh
     - ./zstd_macos.sh
   cocaine_diesel_libs_macos_artifacts:
     path: "build/**"
@@ -60,7 +58,6 @@ linux_task:
     - ./glfw_linux.sh
     - ./luau_linux.sh
     - ./openal_linux.sh
-    - ./yoga_linux.sh
     - ./zstd_linux.sh
   cocaine_diesel_libs_linux_artifacts:
     path: "build/**"
