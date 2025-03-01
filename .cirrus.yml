@@ -33,6 +33,7 @@ macos_task:
     - ./freetype_macos.sh
     - ./luau_macos.sh
     - ./openal_macos.sh
+    - ./sdl_macos.sh
     - ./tracy_macos.sh
     - ./zstd_macos.sh
   cocaine_diesel_libs_macos_artifacts:
