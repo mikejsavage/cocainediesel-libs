@@ -1,2 +1,2 @@
 #! /bin/sh
-"$(dirname "$0")/zig-0.11.0/zig" ar "$@"
+"$(dirname "$0")/zig-$(cat "$(dirname "$0")/zig_version.txt")/zig" ar "$@"
