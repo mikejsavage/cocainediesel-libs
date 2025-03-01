@@ -13,7 +13,6 @@ RUN ./curl_linux.sh
 RUN ./discord_linux.sh
 RUN ./freetype_linux.sh
 RUN ./glad_linux.sh
-RUN ./glfw_linux.sh
 RUN ./luau_linux.sh
 RUN ./openal_linux.sh
 RUN ./sdl_linux.sh

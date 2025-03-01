@@ -13,7 +13,6 @@ windows_task:
     - curl_windows.bat
     - discord_windows.bat
     - freetype_windows.bat
-    - glfw_windows.bat
     - luau_windows.bat
     - openal_windows.bat
     - sdl_windows.bat
@@ -32,7 +31,6 @@ macos_task:
   build_script:
     - ./discord_macos.sh
     - ./freetype_macos.sh
-    - ./glfw_macos.sh
     - ./luau_macos.sh
     - ./openal_macos.sh
     - ./tracy_macos.sh
@@ -56,7 +54,6 @@ linux_task:
     - ./discord_linux.sh
     - ./freetype_linux.sh
     - ./glad_linux.sh
-    - ./glfw_linux.sh
     - ./luau_linux.sh
     - ./openal_linux.sh
     - ./sdl_linux.sh
