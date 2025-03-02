@@ -10,4 +10,4 @@ flags="\
 -DCMAKE_DISABLE_FIND_PACKAGE_PNG=TRUE \
 -DCMAKE_DISABLE_FIND_PACKAGE_ZLIB=TRUE"
 
-standard_cmake freetype freetype-2.13.3 libfreetype*.a "$flags"
+standard_cmake freetype freetype-2.13.2 libfreetype*.a "$flags"
