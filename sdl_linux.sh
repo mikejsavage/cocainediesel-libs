@@ -2,6 +2,9 @@
 
 . ./common_linux.sh
 
+# cmake autodetection should set SDL_VIDEO_OPENGL=ON/SDL_VIDEO_OPENGL_GLX=ON
+# but cmake is a shithole build system so it doesn't and we have to do it
+# manually here
 flags="\
 -DSDL_SHARED=OFF \
 -DSDL_STATIC=ON \
@@ -21,11 +24,15 @@ flags="\
 
 -DSDL_DUMMYVIDEO=OFF \
 -DSDL_OFFSCREEN=OFF \
--DSDL_OPENGL=OFF \
+-DSDL_OPENGL=ON \
+-DSDL_OPENGLES=OFF \
 -DSDL_VULKAN=OFF \
 -DSDL_X11=ON \
 -DSDL_WAYLAND=ON \
+-DSDL_VIDEO_OPENGL=ON \
+-DSDL_VIDEO_OPENGL_GLX=ON \
 
+-DSDL_DUMMYAUDIO=OFF \
 -DSDL_DISKAUDIO=OFF \
 -DSDL_ALSA=ON \
 -DSDL_PULSEAUDIO=ON \
