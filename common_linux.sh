@@ -11,9 +11,11 @@ standard_cmake() {
 	cp -r "$2" "$1build"
 	cd "$1build"
 
+	$EXTRA_PREBUILD_COMMANDS
+
 	cmake -G "Ninja Multi-Config" -Bbuild $4
-	cmake --build build $5 --config Debug --parallel $(nproc --all)
-	cmake --build build $5 --config Release --parallel $(nproc --all)
+	cmake --build build $EXTRA_BUILD_ARGS --config Debug --parallel $(nproc --all)
+	cmake --build build $EXTRA_BUILD_ARGS --config Release --parallel $(nproc --all)
 
 	cd ..
 

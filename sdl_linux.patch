@@ -1,0 +1,22 @@
+diff --git a/src/stdlib/SDL_string.c b/src/stdlib/SDL_string.c
+index 39c49e46..2469a3c7 100644
+--- a/src/stdlib/SDL_string.c
++++ b/src/stdlib/SDL_string.c
+@@ -927,7 +927,7 @@ long SDL_wcstol(const wchar_t *string, wchar_t **endp, int base)
+ 
+ size_t SDL_strlcpy(SDL_OUT_Z_CAP(maxlen) char *dst, const char *src, size_t maxlen)
+ {
+-#ifdef HAVE_STRLCPY
++#ifdef HAVE_STRLCPY && false
+     return strlcpy(dst, src, maxlen);
+ #else
+     size_t srclen = SDL_strlen(src);
+@@ -995,7 +995,7 @@ size_t SDL_utf8strnlen(const char *str, size_t bytes)
+ 
+ size_t SDL_strlcat(SDL_INOUT_Z_CAP(maxlen) char *dst, const char *src, size_t maxlen)
+ {
+-#ifdef HAVE_STRLCAT
++#ifdef HAVE_STRLCAT && false
+     return strlcat(dst, src, maxlen);
+ #else
+     size_t dstlen = SDL_strlen(dst);

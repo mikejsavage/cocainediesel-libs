@@ -8,8 +8,8 @@ standard_cmake() {
 	cd "$1build"
 
 	cmake -GXcode -Bbuild -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 $4
-	cmake --build build $5 --config Debug --parallel $(nproc --all)
-	cmake --build build $5 --config Release --parallel $(nproc --all)
+	cmake --build build $EXTRA_BUILD_ARGS --config Debug --parallel $(nproc --all)
+	cmake --build build $EXTRA_BUILD_ARGS --config Release --parallel $(nproc --all)
 
 	cd ..
 

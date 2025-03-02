@@ -37,6 +37,8 @@ flags="\
 -DSDL_ALSA=ON \
 -DSDL_PULSEAUDIO=ON \
 -DSDL_PIPEWIRE=ON"
+
+EXTRA_PREBUILD_COMMANDS="patch -p1 -i ../sdl_linux.patch"
 standard_cmake sdl SDL-3.2.4 "*.a" "$flags"
 
 cp -r SDL-3.2.4/include/SDL3 build/sdl
