@@ -60,6 +60,7 @@ linux_task:
     - ./luau_linux.sh
     - ./openal_linux.sh
     - ./sdl_linux.sh
+    - ./tracy_linux.sh
     - ./zstd_linux.sh
   cocaine_diesel_libs_linux_artifacts:
     path: "build/**"
