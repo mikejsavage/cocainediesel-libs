@@ -28,7 +28,7 @@ set FLAGS=%FLAGS% -DSDL_DISKAUDIO=OFF
 set FLAGS=%FLAGS% -DSDL_OFFSCREEN=OFF
 set FLAGS=%FLAGS% -DSDL_OPENGLES=OFF
 
-robocopy SDL-3.4.4 sdlbuild /E /NFL /NDL /NJH /NJS /NP
+robocopy SDL3-3.4.4 sdlbuild /E /NFL /NDL /NJH /NJS /NP
 mkdir sdlbuild\build
 cd sdlbuild\build
 
