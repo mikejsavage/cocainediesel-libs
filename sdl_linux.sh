@@ -40,8 +40,8 @@ flags="\
 -DSDL_PIPEWIRE=ON"
 
 EXTRA_PREBUILD_COMMANDS="patch -p1 -i ../sdl_linux.patch"
-standard_cmake sdl SDL-3.2.4 "*.a" "$flags"
+standard_cmake sdl SDL-3.4.4 "*.a" "$flags"
 
-cp -r SDL-3.2.4/include/SDL3 build/sdl
+cp -r SDL-3.4.4/include/SDL3 build/sdl
 
 rm -r sdlbuild

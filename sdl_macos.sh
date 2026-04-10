@@ -26,4 +26,4 @@ flags="\
 
 -DSDL_DISKAUDIO=OFF"
 
-standard_cmake sdl SDL-3.2.4 "*.a" "$flags"
+standard_cmake sdl SDL-3.4.4 "*.a" "$flags"
