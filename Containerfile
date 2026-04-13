@@ -4,7 +4,7 @@ RUN apk update
 RUN apk upgrade
 RUN apk add bash make cmake ninja
 RUN apk add patch # sdl
-RUN apk add libxcursor-dev libxi-dev libxrandr-dev libxinerama-dev libxkbcommon-dev libxscrnsaver-dev # sdl video
+RUN apk add libxcursor-dev libxi-dev libxrandr-dev libxinerama-dev libxkbcommon-dev libxscrnsaver-dev libxtst-dev # sdl video
 RUN apk add wayland-dev wayland-protocols # sdl video
 RUN apk add mesa-dev # sdl video
 RUN apk add alsa-lib-dev pulseaudio-dev pipewire-dev # sdl audio
