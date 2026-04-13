@@ -13,7 +13,7 @@ standard_cmake() {
 
 	$EXTRA_PREBUILD_COMMANDS
 
-	cmake -G "Ninja Multi-Config" -Bbuild $4
+	cmake -G "Ninja Multi-Config" -Bbuild -DCMAKE_POLICY_VERSION_MINIMUM=3.5 $4
 	cmake --build build $EXTRA_BUILD_ARGS --config Debug --parallel $(nproc --all)
 	cmake --build build $EXTRA_BUILD_ARGS --config Release --parallel $(nproc --all)
 
