@@ -7,7 +7,7 @@ standard_cmake() {
 	cp -r "$2" "$1build"
 	cd "$1build"
 
-	cmake -GXcode -Bbuild -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 $4
+	cmake -GXcode -Bbuild -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 -DCMAKE_POLICY_VERSION_MINIMUM=3.5 $4
 	cmake --build build $EXTRA_BUILD_ARGS --config Debug --parallel $(nproc --all)
 	cmake --build build $EXTRA_BUILD_ARGS --config Release --parallel $(nproc --all)
 
