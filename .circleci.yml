@@ -1,0 +1,78 @@
+version: 2.1
+
+jobs:
+  windows:
+    machine:
+      image: "windows-server-2019-vs2022:stable"
+    steps:
+      - checkout
+      - run:
+          name: Build Libraries
+          shell: cmd.exe
+          command: |
+            call "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" amd64
+            call curl_windows.bat
+            call discord_windows.bat
+            call freetype_windows.bat
+            call luau_windows.bat
+            call openal_windows.bat
+            call sdl_windows.bat
+            call tracy_windows.bat
+            call zstd_windows.bat
+      - store_artifacts:
+          path: build/
+
+  macos:
+    macos:
+      xcode: 15.3.0 # Matches macOS Sonoma environment
+    environment:
+      ZERO_AR_DATE: "1"
+    steps:
+      - checkout
+      - run:
+          name: Build Libraries
+          command: |
+            ./discord_macos.sh
+            ./freetype_macos.sh
+            ./luau_macos.sh
+            ./openal_macos.sh
+            ./sdl_macos.sh
+            ./tracy_macos.sh
+            ./zstd_macos.sh
+      - store_artifacts:
+          path: build/
+
+  linux:
+    docker:
+      - image: alpine:latest
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: |
+            apk add bash make cmake ninja patch
+            apk add libxcursor-dev libxi-dev libxrandr-dev libxinerama-dev libxkbcommon-dev
+            apk add wayland-dev wayland-protocols
+            apk add mesa-dev
+            apk add alsa-lib-dev pulseaudio-dev pipewire-dev
+      - run:
+          name: Build Libraries
+          command: |
+            ./curl_linux.sh
+            ./discord_linux.sh
+            ./freetype_linux.sh
+            ./glad_linux.sh
+            ./luau_linux.sh
+            ./openal_linux.sh
+            ./sdl_linux.sh
+            ./tracy_linux.sh
+            ./zstd_linux.sh
+      - store_artifacts:
+          path: build/
+
+workflows:
+  build-libs:
+    jobs:
+      - windows
+      - macos
+      - linux
