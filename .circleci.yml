@@ -63,7 +63,6 @@ jobs:
             ./curl_linux.sh
             ./discord_linux.sh
             ./freetype_linux.sh
-            ./glad_linux.sh
             ./luau_linux.sh
             ./openal_linux.sh
             ./sdl_linux.sh
