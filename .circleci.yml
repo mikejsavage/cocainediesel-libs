@@ -11,10 +11,6 @@ jobs:
           name: Build Libraries
           shell: cmd.exe
           command: |
-            dir "C:\\"
-            dir "C:\\Program Files (x86)\\"
-            dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\"
-            call "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\Build\\vcvarsall.bat" amd64
             call curl_windows.bat
             call discord_windows.bat
             call freetype_windows.bat
