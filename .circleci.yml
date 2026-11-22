@@ -8,7 +8,7 @@ jobs:
     executor: win/default
     steps:
       - checkout
-      - run: choco install cmake vulkan-sdk
+      - run: choco install cmake
       - run:
           name: Build Libraries
           command: |
