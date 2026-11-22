@@ -10,13 +10,13 @@ flags="-DTRACY_STATIC=ON"
 cp -r tracy-0.11.1 tracybuild
 cd tracybuild
 
-cmake -Bdebugbuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 $flags
+cmake -Bdebugbuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 -DCMAKE_POLICY_VERSION_MINIMUM=3.5 $flags
 cmake --build debugbuild --config Debug
-cmake -Breleasebuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 $flags -DTRACY_ENABLE=OFF
+cmake -Breleasebuild -GXcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 -DCMAKE_POLICY_VERSION_MINIMUM=3.5 $flags -DTRACY_ENABLE=OFF
 cmake --build releasebuild --config Release
 
 cd profiler
-cmake -Bbuild -GXcode -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15
+cmake -Bbuild -GXcode -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 cmake --build build --config Release
 cd ..
 
