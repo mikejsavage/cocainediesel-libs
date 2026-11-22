@@ -1,24 +1,25 @@
 version: 2.1
 
+orbs:
+  win: circleci/windows@5.0
+
 jobs:
   windows:
-    machine:
-      image: "windows-server-2022-gui:current"
-      resource_class: windows.medium
+    executor: win/default
     steps:
       - checkout
+      - run: choco install cmake vulkan-sdk
       - run:
-          name: Build Libraries
-          shell: cmd.exe
-          command: |
-            call curl_windows.bat
-            call discord_windows.bat
-            call freetype_windows.bat
-            call luau_windows.bat
-            call openal_windows.bat
-            call sdl_windows.bat
-            call tracy_windows.bat
-            call zstd_windows.bat
+        name: Build Libraries
+        command: |
+          ./curl_windows.bat
+          ./discord_windows.bat
+          ./freetype_windows.bat
+          ./luau_windows.bat
+          ./openal_windows.bat
+          ./sdl_windows.bat
+          ./tracy_windows.bat
+          ./zstd_windows.bat
       - store_artifacts:
           path: build/
 
