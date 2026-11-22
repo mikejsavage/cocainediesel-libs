@@ -20,8 +20,9 @@ jobs:
             ./sdl_windows.bat
             ./tracy_windows.bat
             ./zstd_windows.bat
+            Compress-Archive -Path build -DestinationPath build.zip
       - store_artifacts:
-          path: build/
+          path: build.zip
 
   macos:
     macos:
@@ -42,8 +43,9 @@ jobs:
             ./sdl_macos.sh
             ./tracy_macos.sh
             ./zstd_macos.sh
+            tar --create --file=build.tar build
       - store_artifacts:
-          path: build/
+          path: build.tar
 
   linux:
     docker:
@@ -69,8 +71,9 @@ jobs:
             ./sdl_linux.sh
             ./tracy_linux.sh
             ./zstd_linux.sh
+            tar --create --file=build.tar build
       - store_artifacts:
-          path: build/
+          path: build.tar
 
 workflows:
   build-libs:
