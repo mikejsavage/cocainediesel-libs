@@ -10,16 +10,16 @@ jobs:
       - checkout
       - run: choco install cmake vulkan-sdk
       - run:
-        name: Build Libraries
-        command: |
-          ./curl_windows.bat
-          ./discord_windows.bat
-          ./freetype_windows.bat
-          ./luau_windows.bat
-          ./openal_windows.bat
-          ./sdl_windows.bat
-          ./tracy_windows.bat
-          ./zstd_windows.bat
+          name: Build Libraries
+          command: |
+            ./curl_windows.bat
+            ./discord_windows.bat
+            ./freetype_windows.bat
+            ./luau_windows.bat
+            ./openal_windows.bat
+            ./sdl_windows.bat
+            ./tracy_windows.bat
+            ./zstd_windows.bat
       - store_artifacts:
           path: build/
 
